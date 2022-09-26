@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="074a7986-5f71-4e6b-b5cc-360618b9e827" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dev009/K1/ConnectionManagerService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item6.xsd" MetadataType="Schema" ID="bbe4eb55-3a94-4676-93e9-98fdc65124e1" SourceId="1" SourceUrl="http://dev009/K1/ConnectionManagerService/?xsd=xsd2" />
+    <MetadataFile FileName="item7.xsd" MetadataType="Schema" ID="6ff7062e-5dae-472d-a8cf-1f1498d6fea6" SourceId="1" SourceUrl="http://dev009/K1/ConnectionManagerService/?xsd=xsd5" />
+    <MetadataFile FileName="item2.wsdl" MetadataType="Wsdl" ID="80cc0713-fc5f-4217-a928-4a066a2c7f6c" SourceId="1" SourceUrl="http://dev009/K1/ConnectionManagerService/?wsdl=wsdl0" />
+    <MetadataFile FileName="item3.wsdl" MetadataType="Wsdl" ID="12096a5a-f415-4cb8-b14e-7f2c114cdab3" SourceId="1" SourceUrl="http://dev009/K1/ConnectionManagerService/?wsdl=wsdl1" />
+    <MetadataFile FileName="ConnectionManagerService1.wsdl" MetadataType="Wsdl" ID="493f725a-b8ee-4965-8ae7-f3cebadefd9c" SourceId="1" SourceUrl="http://dev009/K1/ConnectionManagerService/" />
+    <MetadataFile FileName="item8.xsd" MetadataType="Schema" ID="32f04c24-3c98-4da1-9c64-e40872f02c81" SourceId="1" SourceUrl="http://dev009/K1/ConnectionManagerService/?xsd=xsd6" />
+    <MetadataFile FileName="item9.xsd" MetadataType="Schema" ID="d6445471-f238-4fa8-9b06-ed00ebcfce8a" SourceId="1" SourceUrl="http://dev009/K1/ConnectionManagerService/?xsd=xsd4" />
+    <MetadataFile FileName="item10.xsd" MetadataType="Schema" ID="e38b112b-f0f9-4a05-ad36-2fd70748d7e7" SourceId="1" SourceUrl="http://dev009/K1/ConnectionManagerService/?xsd=xsd1" />
+    <MetadataFile FileName="item11.xsd" MetadataType="Schema" ID="556861ec-525a-41e5-876a-3efadb102651" SourceId="1" SourceUrl="http://dev009/K1/ConnectionManagerService/?xsd=xsd0" />
+    <MetadataFile FileName="item12.xsd" MetadataType="Schema" ID="41d9e165-ad4e-47af-9c48-43dd22038f70" SourceId="1" SourceUrl="http://dev009/K1/ConnectionManagerService/?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+    <ExtensionFile FileName="configuration911.svcinfo" Name="configuration91.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="K1Library.clsDBConstants">
+    <Position X="0.5" Y="0.5" Width="8.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="K1Library.clsDBConstants.Products">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="K1Library.clsDBConstants.SystemFiles">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="K1Library.clsDBConstants.enumFormatType">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsDBConstants.enumButtons">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsDBConstants.enumLanguageFilters">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsDBConstants.enumTableClass">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsDBConstants.enumApplicationType">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Class Name="K1Library.clsDBConstants.clsSystemCode">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="K1Library.clsDBConstants.enumAutoFillTypes">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Class Name="K1Library.clsDBConstants.Fields">
+        <NestedTypes>
+          <Class Name="K1Library.clsDBConstants.Fields.TriggerColumn" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Trigger" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkSecurityGroupSecurity" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.K1MDPTypes" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Button" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Tacit" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Person" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Movement" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Icon" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.TypeFieldInfo" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.HelpScreen" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LanguageString" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkSecurityGroupAppMethod" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Method" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Font" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.SavedSearch" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Filter" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Error" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.ErrorMessage" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.K1SystemFlags" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.K1LicenceFile" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.UserProfile" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.K1StartPoint" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Solicitation" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.ExportFormat" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.AutoNumberFormatMultipleSequence" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Period" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.TypeFieldLinkInfo" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkMailListPerson" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Table" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkTacitProductService" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkTacitCorporateVocabulary" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Field" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.MetadataProfile" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.TableMethod" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Forms" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkTacitEntity" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Warning" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.EDOC" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.K1Session" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkTacitPerson" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Codes" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.String" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.ScheduledTask" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkSolicitationCorporateVocabulary" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.StoredProcedure" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.K1PickList" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.ApplicationMethod" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.FieldLink" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Process" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkSecurityGroupTableMethod" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkSecurityGroupTable" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.TKQueue" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.K1Configuration" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Caption" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.AutoNumberFormat" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.SecurityGroup" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.DefaultSort" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkTacitWWW" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Request" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkSecurityGroupField" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Background" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.Type" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.LinkSolicitationMailList" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.AuditTrail" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.SavedReport" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="K1Library.clsDBConstants.Fields.K1RecordLock" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+        </NestedTypes>
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="K1Library.clsDBConstants.enumFilterTypes">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Class Name="K1Library.clsDBConstants.StoredProcedures">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="K1Library.clsDBConstants.enumMDPTypeCodes">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Class Name="K1Library.clsDBConstants.Tables">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="K1Library.clsDBConstants.enumDateTypes">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDBConstants.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAEABAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Database\clsDBConstants.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="K1Library - Database Access Classes&#xD;&#xA;&#xD;&#xA;Classes that are for interacting with the database within K1 &amp; RecFind Applications.">
+    <Position X="0.635" Y="0.5" Height="1.096" Width="2.45" />
+  </Comment>
+  <Class Name="K1Library.clsConnection">
+    <Position X="6.25" Y="13" Width="3.75" />
+    <NestedTypes>
+      <Class Name="K1Library.clsConnection.clsConnectionInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsConnection.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAgAACAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Database\clsConnection.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDBParameter" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="19" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAgCQAACAAACAAAASAACBAAAAAIAAgAAAAQAA=</HashCode>
+      <FileName>Database\clsDBParameter.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.clsSqlDependency">
+    <Position X="1.25" Y="15.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACEAAAAAAAQAAAAAAAAAABAAIAAAQAAQAEg=</HashCode>
+      <FileName>Database\clsSqlDependency.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsSysInfo" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="15.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>RCBEIQgABCEAASIAAA1AUgAAIAEQAgAEABAggAQBgEw=</HashCode>
+      <FileName>Database\clsSysInfo.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.clsTableIndex" BaseTypeListCollapsed="true">
+    <Position X="11" Y="15.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AADAIAAAACADAAAJABAQwAYAgAARAECAAABCgIBAwAI=</HashCode>
+      <FileName>Database\clsTableIndex.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.clsDB">
+    <Position X="0.5" Y="2" Width="4" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsDB.enumDataAccessType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDB.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsDB.enumTransferType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDB.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>YACCIFUBQCBwIEQgBAhMhQDRQgSQCINDABAEAAAgagI=</HashCode>
+      <FileName>Database\clsDB.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="K1Library.clsDB_Direct">
+    <Position X="5.75" Y="2" Width="4" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsDB_Direct.enumSPType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDB_Direct.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsDB_Direct.enumSavedSearchType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDB_Direct.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsDB_Direct.enumSQLExceptions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Database\clsDB_Direct.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>YBDCIBQBUCBAAGBgBAAMElhZgAwAAABBACAEBBYAAgI=</HashCode>
+      <FileName>Database\clsDB_Direct.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDB_System">
+    <Position X="11" Y="2" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>ACikNgCAGjYgEAkJVoCQAAEASAQEkAEFyCAEVDBABqA=</HashCode>
+      <FileName>Database\clsDB_System.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

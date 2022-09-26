@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="K1Library - DRM Classes&#xD;&#xA;&#xD;&#xA;Classes that are used by the DRM.">
+    <Position X="14.864" Y="0.625" Height="1.096" Width="2.45" />
+  </Comment>
+  <Class Name="K1Library.clsDRMBase">
+    <Position X="18.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>CgAAIAAAICEAhAAAAACAAAgBAAAAQACgACKCAQAhAAA=</HashCode>
+      <FileName>DRMObjects\clsDRMBase.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="K1Library.clsDRMCaption">
+    <Position X="28" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAQgAAAAAAAAABAAEAAAAACAAAAAIAAAA=</HashCode>
+      <FileName>DRMObjects\clsDRMCaption.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDRMErrorMessage">
+    <Position X="30.75" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAABAAAQgAAAAAAAAABAAEAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>DRMObjects\clsDRMErrorMessage.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDRMField">
+    <Position X="33.75" Y="6" Width="3" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="K1Library.clsDRMField.enumStandardField" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DRMObjects\clsDRMField.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CUgqNTKYDKJIUECQI67AQIjZAY/AcoApCkACw6BJkTk=</HashCode>
+      <FileName>DRMObjects\clsDRMField.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDRMFieldLink">
+    <Position X="4" Y="6" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EEACBQAAAIAAUAAAAAAAAAABAQAAEAABCAAAgIAAAAE=</HashCode>
+      <FileName>DRMObjects\clsDRMFieldLink.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDRMIndex">
+    <Position X="1.5" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAABAAAAAAAAAABAAAAAQAA=</HashCode>
+      <FileName>DRMObjects\clsDRMIndex.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDRMListColumn">
+    <Position X="7.25" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAKBAAAAAgAQAACAAAAAEABAAkAAAAAAgAgAIAAAQA=</HashCode>
+      <FileName>DRMObjects\clsDRMListColumn.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDRMTable">
+    <Position X="10.25" Y="6" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAxQQAIkAEQBwAAgMgABQCIBEAEAQAQoCIQAAIABwQA=</HashCode>
+      <FileName>DRMObjects\clsDRMTable.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDRMTrigger">
+    <Position X="14.75" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABEAAAAAAAAQBIAIBCBAAAJAAEAAAAIAQAACEEAgAA=</HashCode>
+      <FileName>DRMObjects\clsDRMTrigger.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDRMTypeField">
+    <Position X="20.75" Y="6" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AEACBAIQAAgAUAAAAAwAAAABAQEAIAABCAAAAIAEASA=</HashCode>
+      <FileName>DRMObjects\clsDRMTypeField.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDRMTypeFieldLink">
+    <Position X="17.75" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEACBAAAAAgAUAAAAAAAAAABAAEAAAIACAAAAIgAAQA=</HashCode>
+      <FileName>DRMObjects\clsDRMTypeFieldLink.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDRMWarningMessage">
+    <Position X="24.5" Y="6" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAgAAAQAAAIAAAAAAJAAEIAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>DRMObjects\clsDRMWarningMessage.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

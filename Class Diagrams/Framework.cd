@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="K1Library.clsAutoFillInfo" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="3" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAASkAAAAAAABABAgAAAAAAAAAAAAAAQBAABA=</HashCode>
+      <FileName>AutoFill Classes\clsAutoFillInfo.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.clsAutoNumberToken">
+    <Position X="12.75" Y="0.5" Width="2.5" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsAutoNumberToken.enumTokenType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AutoFill Classes\clsAutoNumberToken.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAABAgAAAAAgA=</HashCode>
+      <FileName>AutoFill Classes\clsAutoNumberToken.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsAutoNumberValidation">
+    <Position X="12.5" Y="6.5" Width="3" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsAutoNumberValidation.enumAutonumberErrorType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AutoFill Classes\clsAutoNumberValidation.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAIgQAAAAAQAABAAAAQBAAAAIACAAgAAAAAAEAAAAA=</HashCode>
+      <FileName>AutoFill Classes\clsAutoNumberValidation.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsK1Exception" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgIAAAACEAAAAAggQAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Exceptions\clsK1Exception.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.clsFileReader">
+    <Position X="12.25" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gAEAAAABAAAAAAACAAAAAAAAAAAAIAAAAAgAAAAAAAA=</HashCode>
+      <FileName>FilterClasses\clsFileReader.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsFileSummary">
+    <Position X="17.25" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAABAAEEAAgIAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FilterClasses\clsFileSummary.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsSearchFilter" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="13.75" Width="3" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsSearchFilter.enumComparisonType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FilterClasses\clsSearchFilter.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsSearchFilter.enumOperatorType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FilterClasses\clsSearchFilter.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsSearchFilter.enumTokenType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FilterClasses\clsSearchFilter.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgICJ0AEUGEESiAAAAKAJGQCCCBIAAEGAAiAICAQwAA=</HashCode>
+      <FileName>FilterClasses\clsSearchFilter.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.clsSearchValue">
+    <Position X="14.25" Y="20" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAQAAAAAAAAAAIAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>FilterClasses\clsSearchValue.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsSelectInfo" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="13.75" Width="2.75" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsSelectInfo.enumSelectType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FilterClasses\clsSelectInfo.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsSelectInfo.enumDatePartType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FilterClasses\clsSelectInfo.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>Aoj0IgSAACFE8QQBRBQAAABIBgAEAABBCEAAACAKQAE=</HashCode>
+      <FileName>FilterClasses\clsSelectInfo.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.clsAuditTrail">
+    <Position X="9.25" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAARAAAEAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\clsAuditTrail.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsConfig">
+    <Position X="16" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ANgKiAMQBgAAkAACAADAWgE+ACBBAAAAgAAAAgAAAAA=</HashCode>
+      <FileName>Framework\clsConfig.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsConfigFont">
+    <Position X="19.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAggAEAAAAAAQAAAAAAAAAAAAIgAAIQAA=</HashCode>
+      <FileName>Framework\clsConfigFont.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsEmailInfo" BaseTypeListCollapsed="true">
+    <Position X="22.5" Y="3.25" Width="2.25" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsEmailInfo.enumMailType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Framework\clsEmailInfo.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAEIAAIAiAAAAAAAAAAEDAAACABABAAAAAAIgAAAIA=</HashCode>
+      <FileName>Framework\clsEmailInfo.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.clsEncryption">
+    <Position X="19.25" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAgEAAAAAAAIQAEAQAAQAAAAQgAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Framework\clsEncryption.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsErrorReporter">
+    <Position X="22.5" Y="0.5" Width="2.25" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsErrorReporter.enumErrorLogType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Framework\clsErrorReporter.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsErrorReporter.enumErrorMsgType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Framework\clsErrorReporter.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAFAAAAAAAACAAAAABAAA=</HashCode>
+      <FileName>Framework\clsErrorReporter.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsFileInfo">
+    <Position X="9.25" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAABAFQABQAACBAAAAACBEAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Framework\clsFileInfo.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsFormatInfo">
+    <Position X="14.75" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQBAAAAAIAAAAgAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\clsFormatInfo.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsRecordLock">
+    <Position X="17.75" Y="13.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABQEoAAAAAwEEAIAAAAAAAABEEAACAAAAAAEABgAA=</HashCode>
+      <FileName>Framework\clsRecordLock.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsSession" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="18.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQgIAAAAGEABAAAAAAAAAAAAAEAAAAAASAAAAABAgA=</HashCode>
+      <FileName>Framework\clsSession.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.clsSort" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="23.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACJAAAICAAAAAAIABAAAAAAQAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Framework\clsSort.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.clsSystemFlags">
+    <Position X="12.75" Y="23.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAQAAAAABAAgAAiQAEAAmAAAAEFCAAARAUAAAAAgI=</HashCode>
+      <FileName>Framework\clsSystemFlags.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.WMILogicalDisk">
+    <Position X="20.75" Y="32.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACEIAgghAAAAAAAAQUEAAAAAAACAAgAAECAQAA=</HashCode>
+      <FileName>Framework\Licensing\WMILogicalDisk.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.Trace">
+    <Position X="17.25" Y="32.75" Width="3" />
+    <NestedTypes>
+      <Enum Name="K1Library.Trace.TraceFormatting" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Framework\Trace.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AACAAAAYAAIEAAAIQAAACAAAAAAAABAAAAAAAAAABAA=</HashCode>
+      <FileName>Framework\Trace.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsMaskBase">
+    <Position X="3" Y="9" Width="3" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsMaskBase.enumMaskSearchType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Record Objects\clsMaskBase.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsMaskBase.enumMaskObjectType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Record Objects\clsMaskBase.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IkAAIAQAQGEAEAAAAEAAAACAAQAAAAAQCIKAAIAAIAA=</HashCode>
+      <FileName>Record Objects\clsMaskBase.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="K1Library.clsMaskField">
+    <Position X="0.5" Y="14.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>CAFQDBCQAAAAAAQAEAQACAAAEQAAIAABAACgAQAAsCA=</HashCode>
+      <FileName>Record Objects\clsMaskField.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsMaskFieldLink">
+    <Position X="5.25" Y="14.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAKAAAAAAAAAAAZgAEAAAQADAEAkAMAA=</HashCode>
+      <FileName>Record Objects\clsMaskFieldLink.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsMaskFieldValue" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="13.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAAAQCwAAhAAAQAgAQAAgBAAgAACoAJhAIBwCgA=</HashCode>
+      <FileName>Record Objects\clsMaskFieldValue.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.clsTableMask" BaseTypeListCollapsed="true">
+    <Position X="16" Y="23.5" Width="3.75" />
+    <NestedTypes>
+      <Class Name="K1Library.clsTableMask.Columns" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Record Objects\clsTableMask.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="K1Library.clsTableMask.enumMaskType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Record Objects\clsTableMask.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAIQICAAhCAAxAAgAAEoQAAAAQAAAAAxATACAwAAECA=</HashCode>
+      <FileName>Record Objects\clsTableMask.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.Win32Mapi.Mapi" BaseTypeListCollapsed="true">
+    <Position X="25" Y="23.5" Width="2.25" />
+    <NestedTypes>
+      <Enum Name="K1Library.Win32Mapi.Mapi.enumRecipType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Framework\clsMAPI.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>FhAAIAVAgCMYhVCQAMAAUCIhIKOiokEAAARCLAVAACA=</HashCode>
+      <FileName>Framework\clsMAPI.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="K1Library.Win32Mapi.MailAttach">
+    <Position X="20.5" Y="23.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAQAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\clsMAPI.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.Win32Mapi.MailEnvelop">
+    <Position X="20.5" Y="25.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAACAAAAAAAAAAAEACAAAABAAAAAAAAAAI=</HashCode>
+      <FileName>Framework\clsMAPI.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.Win32Mapi.MapiFileDesc">
+    <Position X="20.5" Y="28.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAkAQAAgABAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\clsMAPI.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.Win32Mapi.MapiMessage">
+    <Position X="22.75" Y="23.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEQAAAAAAIIAAgAAAAECAgAgAAQAAAQIAAAAAA=</HashCode>
+      <FileName>Framework\clsMAPI.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.Win32Mapi.MapiRecipDesc">
+    <Position X="22.75" Y="27.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAsAABIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\clsMAPI.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.Licensing.clsActivationKey">
+    <Position X="9" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAARCAABACAAAghARAAQIAQAAAAAGIAQAEIIAA=</HashCode>
+      <FileName>Framework\Licensing\clsActivationKey.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.Licensing.clsDocumentLicence">
+    <Position X="19.25" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAAAAAAAAAAAAgAAAAAAEAAAAgAAAAAAAAgAA=</HashCode>
+      <FileName>Framework\Licensing\clsDocumentLicence.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.Licensing.clsLicenceFile">
+    <Position X="22.25" Y="9.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAEAwAAAIABABAAAAAAAAAAAgAAAAAMBAAA=</HashCode>
+      <FileName>Framework\Licensing\clsLicenceFile.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.Licensing.clsLicenceFileInfo">
+    <Position X="9.25" Y="13.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>EAggCAAAEGgEhACUCACEBQAAQCABgAmAASIsEgIpIAA=</HashCode>
+      <FileName>Framework\Licensing\clsLicenceFileInfo.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.Configuration.SettingsSectionBase">
+    <Position X="9.25" Y="27" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AQAAAIAAAEAABAAQAAAAAAAAAAACAAAAgAEEAAAAAAA=</HashCode>
+      <FileName>Framework\SettingsSectionBase.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsSearchElement">
+    <Position X="0.5" Y="4" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAQYAAAAAAAAAAIACBQhAAAAAAACggAAAgAA=</HashCode>
+      <FileName>FilterClasses\clsSearchElement.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="K1Library.clsSearchGroup">
+    <Position X="4.25" Y="4" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAADAABAAAAAAACQgAAAAAA=</HashCode>
+      <FileName>FilterClasses\clsSearchGroup.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="K1Library.clsSearchObjBase">
+    <Position X="2.5" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIBAAACABAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>FilterClasses\clsSearchObjBase.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Module Name="K1Library.modEvents">
+    <Position X="9" Y="34" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAABAAgAAAAAAEAAACAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modules\modEvents.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="K1Library.modGlobal">
+    <Position X="13" Y="34" Width="3.75" />
+    <NestedTypes>
+      <Enum Name="K1Library.modGlobal.enumFileSizeUnit" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Modules\modGlobal.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AEB1AAIKAABAAlACEAgAEAAAAiQgCEAMAQAAIgAAARA=</HashCode>
+      <FileName>Modules\modGlobal.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

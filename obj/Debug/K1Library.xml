@@ -1,0 +1,3465 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+K1Library
+</name>
+</assembly>
+<members>
+<member name="T:K1Library.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:K1Library.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:K1Library.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:K1Library.My.Resources.Resources.K1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="M:K1Library.clsConnectionManager.SystemExists(System.String)">
+ <summary>
+ Checks if the specified system is managed by the connection manager
+ </summary>
+ <param name="strSystemName">Name of system that we want the information for.</param>
+ <returns>Returns True if system is managed; otherwise False.</returns>
+</member>
+<member name="M:K1Library.clsConnectionManager.GetSystemNames(K1Library.K1ConnectionManager.IConnectionManagerSystemType,K1Library.K1ConnectionManager.IConnectionManagerAccessType)">
+ <summary>
+ Returns the names for all the managed systems of the specified applications.
+ </summary>
+ <param name="eAppType">Application that relates to the managed system.</param>
+ <returns>String array of system names.</returns>
+</member>
+<member name="M:K1Library.clsConnectionManager.GetSystemInfo(System.String,System.Double,System.String,System.Boolean,System.Double)">
+ <summary>
+ Returns information about the specified system.
+ </summary>
+ <param name="strSystemName">Name of system that we want the information for.</param>
+</member>
+<member name="M:K1Library.clsConnectionManager.GetEncryptedConnectionString(System.Double,System.String,System.Boolean)">
+ <summary>
+ Returns the encrypted connection string of the specified system.
+ </summary>
+ <param name="strSystemName">Name of system that we want the connection string for.</param>
+ <returns>Encrypted connection string.</returns>
+</member>
+<member name="T:K1Library.clsDB">
+ <summary>
+ Represents a connection to the data layer (either direct database or via web services)
+ </summary>
+</member>
+<member name="P:K1Library.clsDB.Profile">
+ <summary>
+ Each data access object should be linked to exactly one user profile
+ </summary>
+</member>
+<member name="P:K1Library.clsDB.SysInfo">
+ <summary>
+ Holds in memory information regarding database objects
+ </summary>
+</member>
+<member name="P:K1Library.clsDB.RecordLimit">
+ <summary>
+ If K1 is setup as a training version, this is record limit associated
+ </summary>
+</member>
+<member name="P:K1Library.clsDB.IsTrainingVersion">
+ <summary>
+ Flags whether K1 is licensed as a training version only
+ </summary>
+</member>
+<member name="P:K1Library.clsDB.DataAccessType">
+ <summary>
+ This flags which type of Data Access Type (Direct or Web Service) this object is
+ </summary>
+</member>
+<member name="P:K1Library.clsDB.BlobChunkSize">
+ <summary>
+ When reading/writing bytes to or from a blob field, this is the size of the chunks used
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.BeginTransaction">
+ <summary>
+ Creates a new transaction for the connection using the default isolation type (Snapshot)
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.BeginTransaction(System.Data.IsolationLevel)">
+ <summary>
+ Creates a new transaction for the connection using the isolation type specified
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.EndTransaction(System.Boolean)">
+ <summary>
+ Ends any transactions which exist on open connections
+ </summary>
+ <param name="blnCommit">True - Commit transaction, False - Rollback transaction</param>
+</member>
+<member name="M:K1Library.clsDB.DataRowValue(System.Data.DataRow,System.String,System.Object)">
+ <summary>
+ Returns a single item record for an object
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.DataRowValue``1(System.Data.DataRow,System.String,System.Object)">
+ <summary>
+ Returns a single TType value from the record.
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.NullValue(System.Object,System.Object)">
+ <summary>
+ If objValue is null, objNull is returned, else objValue is returned
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.ParamNull(System.Object,System.Object)">
+ <summary>
+ Returns a null value if the object is equal to its null equivalent
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.SQLString(System.String)">
+ <summary>
+ Replaces all string marker characters in a Sql Text Value
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetDatabaseVersion">
+ <summary>
+ Returns the Database Version of the K1 database
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.CanWorkWithDatabaseVersion(System.Double,System.Boolean)">
+ <summary>
+ 
+ </summary>
+ 
+</member>
+<member name="M:K1Library.clsDB.GetAvailabilityGroupName">
+ <summary>
+ Returns the Availability Group Name if one exists
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.ParamName(System.String)">
+ <summary>
+ Converts a field name to a SQL Server Stored Procedure parameter name
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.EscapeWildcardChars(System.String,System.Boolean)">
+ <summary>
+ When using the SQL LIKE statement certain characters need to be prefixed with an escape character
+ because they mean something specific to the LIKE function
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetItem(System.String,System.Int32)">
+ <summary>
+ Gets the record with the given ID from the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetList(System.String,System.String,System.Object)">
+ <summary>
+ Gets a list of records from the specified table where strByField matches objValue
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetDataTable(K1Library.clsTable)">
+ <summary>
+ Returns all records for the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetDataTable(System.String)">
+ <summary>
+ Returns all records selected in the stored procedure
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetDataTable(System.String,K1Library.clsDBParameterDictionary)">
+ <summary>
+ Returns all records selected in the stored procedure matching the designated SP's parameters
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetDataTableBySQL(System.String)">
+ <summary>
+ Returns all records selected in the SQL SELECT statement
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetDataTableBySQL(System.String,K1Library.clsDBParameterDictionary)">
+ <summary>
+ Returns all records selected in the SQL SELECT statement with the designated SP Parameters
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetDataTableBySQL(System.String,K1Library.clsDBParameterDictionary,System.Object[])">
+ <summary>
+ Returns all records selected in the SQL SELECT statement with the designated parameters.
+ Replaces all the format items with the string equivalent value in the corresponding array.
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetDataTableBySQL(System.String,K1Library.clsDBParameterDictionary,System.Boolean)">
+ <summary>
+ Returns all records selected in the SQL SELECT statement with the designated parameters.
+ Replaces all the format items with the string equivalent value in the corresponding array.
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetDataTableByField(System.String,System.String,System.Object)">
+ <summary>
+ Returns all records for the specified table where strField matches objValue
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetDataTableByField(System.String,K1Library.clsDBParameterDictionary)">
+ <summary>
+ Returns all records for the specified table where strField matches objValue
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.ExecuteProcedure(System.String)">
+ <summary>
+ Executes the specified stored procedure
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.ExecuteProcedure(System.String,K1Library.clsDBParameterDictionary@)">
+ <summary>
+ Executes the specified stored procedure with the designated SP Parameters
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.ExecuteSQL(System.String)">
+ <summary>
+ Executes the specified SQL statement
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.ExecuteSQL(System.String,K1Library.clsDBParameterDictionary@)">
+ <summary>
+ Executes the specified SQL statement with the designated SP Parameters
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.ExecuteScalar(System.String)">
+ <summary>
+ Executes the specified SQL SELECT statement and returns first column (should be integer)
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.ExecuteScalar(System.String,K1Library.clsDBParameterDictionary@)">
+ <summary>
+ Executes the specified SQL SELECT statement with the designated SP Parameters, and returns first column (should be integer)
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.DeleteRecord(System.String,System.Int32)">
+ <summary>
+ Deletes the record with the designated ID from the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.InsertLink(System.String,System.String,System.Int32,System.String,System.Int32)">
+ <summary>
+ Creates a Link Table record
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.DeleteLink(System.String,System.String,System.Int32,System.String,System.Int32)">
+ <summary>
+ Deletes a Link Table record
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.GetBLOBSize(System.String,System.String,System.Int32)">
+ <summary>
+ Retrieves the size in bytes of the blob field
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.ReadBLOB(System.String,System.String,System.Int32,System.String,System.Boolean)">
+ <summary>
+ Saves the blob to the specified file
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.ReadBLOBToMemory(System.String,System.String,System.Int32)">
+ <summary>
+ Saves the blob to memory
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.WriteBLOB(K1Library.clsTable,K1Library.clsField,System.Int32,System.String,System.Boolean)">
+ <summary>
+ Inserts the file into the blob field of the designated record
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.WriteBLOB(System.String,System.String,System.Data.SqlDbType,System.Int32,System.Int32,System.String,System.Boolean)">
+ <summary>
+ Inserts the file into the blob field of the designated record
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.RecordCountExceeded(System.String)">
+ <summary>
+ Determines if the record limit has been exceeded for the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB.BulkInsert(System.Data.DataTable,System.String)">
+ <summary>
+ Bulk Inserts the records of the datatable to the destination
+ </summary>
+ <param name="objDT">A data table containing the records to bulk insert</param>
+ <param name="strDestTable">The table to bulk insert the records into</param>
+</member>
+<member name="M:K1Library.clsDB_Direct.#ctor(System.String)">
+ <summary>
+ Creates a new database object using the connection string provided
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.#ctor(System.String,K1Library.clsDBConstants.enumApplicationType)">
+ <summary>
+ Creates a new database object using the connection string.
+ Limits SqlDependency initialisation
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.#ctor(System.String,System.String)">
+ <summary>
+ Creates a new database object using the connection string provided
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.#ctor(System.String,K1Library.clsSysInfo,System.Boolean)">
+ <summary>
+ Creates a new database object using the connection string provided and
+ using a shared Sys Info object
+ </summary>
+</member>
+<member name="P:K1Library.clsDB_Direct.ConnectionString">
+ <summary>
+ This contains the database connection string (encrypted)
+ </summary>
+</member>
+<member name="P:K1Library.clsDB_Direct.CommandTimeout">
+ <summary>
+ The time in seconds before a database command times out
+ </summary>
+</member>
+<member name="P:K1Library.clsDB_Direct.IsysIndexPath">
+ <summary>
+ This is the path to the Isys Index used when performing Isys searches
+ </summary>
+</member>
+<member name="P:K1Library.clsDB_Direct.MultiThreaded">
+ <summary>
+ When using a direct connection, this should be true and is a way of keeping transaction threaded
+ When created through web services, this should be false, as each web service call would be on a separate thread
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetConnection(System.Boolean)">
+ <summary>
+ Creates or assigns already open connection if one exists
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.CloseConnection(System.Data.SqlClient.SqlConnection@)">
+ <summary>
+ Closes an open connection, if there is no current transaction
+ </summary>
+ <param name="conDB"></param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_Direct.TestConnection(System.String)">
+ <summary>
+ Tries to open a database connection.  
+ This command should be encapsulated in a try... catch block
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetConnectionString(System.String,System.String,System.String,System.String)">
+ <summary>
+ Returns a valid RecFind connection string given the parameters supplied.
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetConnectionString(System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ Returns a valid Recfind connection string given the parameters supplied.
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetDatabaseInfo(System.String@,System.String@,System.String@,System.Double,System.String,System.Double)">
+ <summary>
+ Returns insensitive information regarding the current connection
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetTransaction">
+ <summary>
+ Returns a transaction object if one exists
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.BeginTransaction">
+ <summary>
+ Starts a database transaction with a default IsolationLevel of Snapshot
+ </summary>
+ <remarks>
+ With an Isolation Level of Snapshot, there is no shared locks on updating and reading.
+ If someone reads a record while somone else is updating it in a transaction, they will
+ get the record as it existed prior to the transaction.
+ </remarks>
+</member>
+<member name="M:K1Library.clsDB_Direct.BeginTransaction(System.Data.IsolationLevel)">
+ <summary>
+ Creates a new transaction for the connection using the isolation type specified
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.OpenConnectionWithContext(System.Data.IDbConnection)">
+ <summary>
+ This is to ensure that the db server has some context of the client connection.
+ </summary>
+ <param name="objConnection"></param>
+ <remarks>Adds the current user profile id.</remarks>
+</member>
+<member name="M:K1Library.clsDB_Direct.EndTransaction(System.Boolean)">
+ <summary>
+ Ends any transactions which exist on open connections
+ </summary>
+ <param name="blnCommit">True - Commit transaction, False - Rollback transaction</param>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetItem(System.String,System.Int32)">
+ <summary>
+ Gets the record with the given ID from the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetList(System.String,System.String,System.Object)">
+ <summary>
+ Gets a list of records from the specified table where strByField matches objValue
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.FillDataTable(System.String,System.Data.CommandType,K1Library.clsDBParameterDictionary,System.Data.SqlClient.OnChangeEventHandler,System.Boolean)">
+ <summary>
+ 
+ </summary>
+ <param name="strCommandText"></param>
+ <param name="eCommandType"></param>
+ <param name="colParams"></param>
+ <param name="objCallBack"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetDataTable(K1Library.clsTable)">
+ <summary>
+ Returns all records for the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetDataTable(System.String)">
+ <summary>
+ Returns all records selected in the stored procedure
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetDataTable(System.String,K1Library.clsDBParameterDictionary)">
+ <summary>
+ Returns all records selected in the stored procedure matching the designated SP's parameters
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetDataTableBySQL(System.String)">
+ <summary>
+ Returns all records selected in the SQL SELECT statement
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetDataTableBySQL(System.String,K1Library.clsDBParameterDictionary)">
+ <summary>
+ Returns all records selected in the SQL SELECT statement with the designated parameters
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetDataTableBySQL(System.String,K1Library.clsDBParameterDictionary,System.Object[])">
+ <summary>
+ Returns all records selected in the SQL SELECT statement with the designated parameters.
+ Replaces all the format items with the string equivalent value in the corresponding array.
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetDataTableByField(System.String,System.String,System.Object)">
+ <summary>
+ Returns all records for the specified table where strField matches objValue
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetDataTableByField(System.String,K1Library.clsDBParameterDictionary)">
+ <summary>
+ Returns all records for the specified table where strField matches objValue
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetParamCollection(K1Library.clsDB_Direct.enumSPType,System.String,System.String,System.Object)">
+ <summary>
+ Returns a collection of parameters with values for a particular 
+ stored procedure for a table (single parameter)
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetParamCollection(K1Library.clsSysInfo,K1Library.clsDB_Direct.enumSPType,System.String,System.String[],System.Object[])">
+ <summary>
+ Returns a collection of parameters with values for a particular 
+ stored procedure for a table (multiple parameters)
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetParamCollection(K1Library.clsDB_Direct.enumSPType,K1Library.clsMaskFieldDictionary)">
+ <summary>
+ Returns a collection of parameters with values for a particular mask collection
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.AddParameterToCollection(K1Library.clsDBParameterDictionary@,K1Library.clsDB_Direct.enumSPType,K1Library.clsField,System.Object)">
+ <summary>
+ Adds a parameter to the parameter collection
+ </summary>
+ <remarks>
+ The ID Field will be designated as inputoutput for the insert stored procedure type
+ </remarks>
+</member>
+<member name="M:K1Library.clsDB_Direct.ExecuteNonQuery(System.String,System.Data.CommandType,K1Library.clsDBParameterDictionary@)">
+ <summary>
+ Executes the specified stored procedure or query
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.ExecuteProcedure(System.String)">
+ <summary>
+ Executes the specified stored procedure
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.ExecuteProcedure(System.String,K1Library.clsDBParameterDictionary@)">
+ <summary>
+ Executes the specified stored procedure with the designated SP Parameters
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.ExecuteSQL(System.String)">
+ <summary>
+ Executes the specified SQL statement
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.ExecuteSQL(System.String,K1Library.clsDBParameterDictionary@)">
+ <summary>
+ Executes the specified SQL statement with the designated Parameters
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.ExecuteScalar(System.String,K1Library.clsDBParameterDictionary@)">
+ <summary>
+ Executes the specified SQL SELECT statement with the designated Parameters, and returns first column (should be integer)
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.ExecuteScalar(System.String)">
+ <summary>
+ Executes the specified SQL SELECT statement and returns first column (should be integer)
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.DeleteRecord(System.String,System.Int32)">
+ <summary>
+ Deletes the record with the designated ID from the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.ProcessSQLExceptionExecute(System.Data.SqlClient.SqlException)">
+ <summary>
+ will throw different exception types depending on the error type
+ it is up to the parent routine to handle these exceptions differently (if needed)
+ </summary>
+ <exception cref="T:K1Library.clsK1Exception"></exception>
+ <exception cref="T:System.Data.SqlClient.SqlException"></exception>
+</member>
+<member name="M:K1Library.clsDB_Direct.ThrowIndexError(System.Data.SqlClient.SqlException)">
+ <summary>
+ Handles unique index errors (creates a nice error message)
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.ThrowUpdateError(System.Data.SqlClient.SqlException)">
+ <summary>
+ Handles mandatory link errors when trying to delete a record (creates a nice error message)
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.InsertLink(System.String,System.String,System.Int32,System.String,System.Int32)">
+ <summary>
+ Creates a Link Table record
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.DeleteLink(System.String,System.String,System.Int32,System.String,System.Int32)">
+ <summary>
+ Deletes a Link Table record
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.ExecuteLinkSP(System.String,K1Library.clsDB_Direct.enumSPType,System.String,System.Int32,System.String,System.Int32)">
+ <summary>
+ Common code used for both the deleting and inserting of link records
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.DeleteLinkSP(System.String,System.String,System.Int32)">
+ <summary>
+ Used when we just want to delete all link records by a single prime id
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetBLOBSize(System.String,System.String,System.Int32)">
+ <summary>
+ Retrieves the size in bytes of the blob field
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.ReadBLOB(System.String,System.String,System.Int32,System.String,System.Boolean)">
+ <summary>
+ Saves the blob to the specified file
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.ReadBLOBToMemory(System.String,System.String,System.Int32)">
+ <summary>
+ Saves the blob to the specified file
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.GetBLOB(System.String,System.String,System.Int32,System.Int32,System.Int32@)">
+ <summary>
+ Saves the blob to the specified file
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.WriteBLOB(K1Library.clsTable,K1Library.clsField,System.Int32,System.String,System.Boolean)">
+ <summary>
+ Inserts the file into the blob field of the designated record
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.WriteBLOB(System.String,System.String,System.Data.SqlDbType,System.Int32,System.Int32,System.String,System.Boolean)">
+ <summary>
+ Inserts the file into the blob field of the designated record
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.SetBLOB(System.String,System.String,System.Data.SqlDbType,System.Int32,System.Int32,System.String,System.Int32,System.Int32@)">
+ <summary>
+ Inserts the file into the blob field of the designated record
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.UpdateBLOB(System.String,System.String,System.Int32,System.Byte[],System.Int64)">
+ <summary>
+ Inserts the file into the blob field of the designated record
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.RecordCountExceeded(System.String)">
+ <summary>
+ Determines if the record limit has been exceeded for the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Direct.BulkInsert(System.Data.DataTable,System.String)">
+ <summary>
+ Bulk Inserts the records of the datatable to the destination
+ </summary>
+ <param name="objDT">A data table containing the records to bulk insert</param>
+ <param name="strDestTable">The table to bulk insert the records into</param>
+</member>
+<member name="P:K1Library.clsDBParameter.Name">
+ <summary>
+ The name expected in the Stored Procedure for the parameter
+ </summary>
+</member>
+<member name="P:K1Library.clsDBParameter.Value">
+ <summary>
+ The value to be passed into the SP
+ </summary>
+</member>
+<member name="P:K1Library.clsDBParameter.Direction">
+ <summary>
+ Input, Output, or both for a Stored Procedure Param
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_Web.#ctor(System.String,System.String)">
+ <summary>
+ Creates a new database object using the connection string provided
+ </summary>
+</member>
+<member name="P:K1Library.clsDB_Web.RecordLimit">
+ <summary>
+ If K1 is setup as a training version, this is record limit associated
+ </summary>
+</member>
+<member name="P:K1Library.clsDB_Web.BlobChunkSize">
+ <summary>
+ When reading/writing bytes to or from a blob field, this is the size of the chunks used
+ </summary>
+</member>
+<member name="T:K1Library.clsSqlNotifier">
+ <summary>
+ This class is a future candidate to replace SQL notifications (clsSqlDependency) in the current K1Library.
+ The current implementation in clsSqlDependency lacks abstraction and not very well thought out. The notification 
+ responsibility is spread out over too many classes for it to be maintainable.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsAuditTrailRepository.Insert(System.String,System.String,System.Int32,K1Library.clsMethod,K1Library.clsTable,System.Int32,System.String,System.String)">
+ <summary>
+ Creates a new Audit Record
+ </summary>    
+ <param name="strAuditExternalId"></param>
+ <param name="strCreatedByApplication"></param>
+ <param name="intPersonId"></param>
+ <param name="objMethod"></param>
+ <param name="objTable"></param>
+ <param name="intId"></param>
+ <param name="strExternalId"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsAuditTrailRepository.InsertAuditXmlData(K1Library.clsAuditTrailRecordData,System.Int32,System.Boolean)">
+ <summary>
+ Inserts the Serialized Audit Data to Database.
+ </summary>
+ <param name="objRecordData"></param>
+ <param name="auditRecordId"></param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsAuditTrailRepository.InsertAuditBlob(System.Int32,System.String)">
+ <summary>
+ Insert the image file as a blob into the database.
+ </summary>
+ <param name="auditRecordId"></param>
+ <param name="fullFileName"></param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsAuditTrailRepository.RemoveUnsupportedCharacters(System.String)">
+ <summary>
+ Cleans out unsupported Unicode char from string
+ </summary>
+ <param name="data"></param>
+ <returns>Cleaned out string valid for building xml document</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsAuditTrailRepository.IsBadXmlChar(System.Char)">
+ <summary>
+ Detects chars not supported in xml char set
+ </summary>
+ <param name="cc"></param>
+ <returns>True if char is NOT supported by xml character set</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.Framework.Security.clsBCryptHashAlgorithm.#ctor(System.String)">
+ <summary>
+ If you supply the salt value make sure to store it somewhere else hashed value will not be verified
+ </summary>
+ <param name="salt"></param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.Framework.Security.clsDotNetSecurityHashAlgorithm.VerifyHash(System.String,System.String)">
+ <summary>
+ Remember to create the Provider with the same hash salt otherwise the Hash value will not match.
+ </summary>
+ <param name="plainText"></param>
+ <param name="hashValue"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.Framework.Security.clsDotNetSecurityHashAlgorithm.ComputeHash(System.String)">
+ <summary>
+ Computes Hash With two pinches of salt
+ </summary>
+ <param name="plainText"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.Framework.Security.clsDotNetSecurityHashAlgorithm.GenerateSalt(System.Int32,System.Int32)">
+ <summary>
+ Keep this salt value value somewhere safe otherwise you won't be able to verify hash values slated with this 
+ </summary>
+ <param name="minSaltSize"></param>
+ <param name="maxSaltSize"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.Framework.Security.HashAlgorithmFactory.CreateHashAlgorithm(K1Library.Framework.Security.HashAlgorithmTypes,System.String)">
+ <summary>
+ Create hash algorithms
+ </summary>
+ <param name="strSalt"></param>
+ <param name="hashType"></param>
+ <returns></returns>
+ <remarks>Not yet implemented!</remarks>
+</member>
+<member name="M:K1Library.clsFullTextInfo.#ctor(K1Library.clsDB_Direct,System.String)">
+ <summary>
+ Constructor for an instance of FullText Information Object
+ </summary>
+ <param name="objDB">Database that the FullText index is in.</param>
+ <param name="strTableName">Table or View name that the FullText index belongs to.</param>
+</member>
+<member name="P:K1Library.clsFullTextInfo.BackgroundUpdateOn">
+ <summary>
+ The table has full-text background update index (autochange tracking) enabled.
+ </summary>
+ <remarks>
+ When
+ BackgroundUpdateOn and ChangeTrackingOn are True = Automatic
+ BackgroundUpdateOn is False and ChangeTrackingOn is True = Manual
+ ChangeTrackingOn is False = Does not track changes
+ </remarks>
+</member>
+<member name="P:K1Library.clsFullTextInfo.HasActiveIndex">
+ <summary>
+ Table has an active full-text index.
+ </summary>
+</member>
+<member name="P:K1Library.clsFullTextInfo.ChangeTrackingOn">
+ <summary>
+ Table has full-text change-tracking enabled.
+ </summary>
+ <remarks>
+ If this is false most properties will not be populated.
+ </remarks>
+</member>
+<member name="P:K1Library.clsFullTextInfo.DocsProcessed">
+ <summary>
+ Number of rows processed since the start of full-text indexing.
+ </summary>
+</member>
+<member name="P:K1Library.clsFullTextInfo.CatalogId">
+ <summary>
+ ID of the full-text catalog in which the full-text index data for the table resides.
+ </summary>
+</member>
+<member name="P:K1Library.clsFullTextInfo.PendingChanges">
+ <summary>
+ Number of rows that are waiting to be indexed.
+ </summary>
+</member>
+<member name="P:K1Library.clsFullTextInfo.FailCount">
+ <summary>
+ The number of rows that full-text search did not index. 
+ </summary>
+</member>
+<member name="P:K1Library.clsFullTextInfo.IndexCount">
+ <summary>
+ Number of rows that were full-text indexed successfully.
+ </summary>
+</member>
+<member name="P:K1Library.clsFullTextInfo.PopulateStatus">
+ <summary>
+ The status of the index population for the table.
+ </summary>
+</member>
+<member name="P:K1Library.clsFullTextInfo.PopulateStatusText">
+ <summary>
+ The status of the index population for the table in a human readable version.
+ </summary>
+</member>
+<member name="P:K1Library.clsFullTextInfo.PopulateStart">
+ <summary>
+ The date and time the last population was started.
+ </summary>
+</member>
+<member name="P:K1Library.clsFullTextInfo.PopulateEnd">
+ <summary>
+ The date and time the last population was completed.
+ </summary>
+</member>
+<member name="M:K1Library.clsFullTextInfo.Refresh">
+ <summary>
+ Refreshes the information for the Full-Text index.
+ </summary>
+</member>
+<member name="M:K1Library.clsFullTextInfo.PopulateStatusToString(K1Library.clsFullTextInfo.enumPopulateStatus)">
+ <summary>
+ Converts the Populate Status value into a human readable string.
+ </summary>
+ <param name="eValue">Populate Status in the database.</param>
+ <returns>Human readable string of the populateStatus value.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsSqlDependency.AddDRMNotifications">
+ <summary>
+ Starts the SQL Notification Listener and adds a notification
+ for DRM_Refresh_Date and DRM_Forced_Logoff_Date
+ </summary>
+</member>
+<member name="M:K1Library.clsSqlDependency.AddDRMNotification">
+ <summary>
+ Adds an SQL notification on the K1SystemFlags table
+ </summary>
+</member>
+<member name="M:K1Library.clsSqlDependency.OnDRMNotification(System.Object,System.Data.SqlClient.SqlNotificationEventArgs)">
+ <summary>
+ Handles the notification when the K1SystemFlags table is changed
+ </summary>
+</member>
+<member name="M:K1Library.clsSqlDependency.AddNotification(System.String,System.String,System.Data.SqlClient.OnChangeEventHandler)">
+ <summary>
+ Starts the SQL Notification Listener and adds a notification to the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsSqlDependency.AddNotification(System.String,System.Data.SqlClient.OnChangeEventHandler)">
+ <summary>
+ Starts the SQL Notification Listener and adds a notification to the specified table
+ </summary>
+</member>
+<member name="P:K1Library.clsSysInfo.ApplicationMethods">
+ <summary>
+ All the standard applicaiton methods indexed by UIID (clsApplicationMethod.enumAppType as string) or ID (integer)
+ </summary>
+</member>
+<member name="P:K1Library.clsSysInfo.DRMMethods">
+ <summary>
+ All the DRM methods indexed by ID
+ </summary>
+</member>
+<member name="P:K1Library.clsSysInfo.DRMFunctions">
+ <summary>
+ All the DRM Functions indexed by ID
+ </summary>
+</member>
+<member name="P:K1Library.clsSysInfo.Tables">
+ <summary>
+ All the K1 Tables indexed by DatabaseName and Table ID (Those tables which are in the "Table" table)
+ </summary>
+</member>
+<member name="P:K1Library.clsSysInfo.Fields">
+ <summary>
+ All the K1 Fields indexed by [Table ID]_[Field DatabaseName] and Field ID
+ </summary>
+</member>
+<member name="P:K1Library.clsSysInfo.FieldLinks">
+ <summary>
+ All the K1 Field Links indexed by FieldLink ID
+ </summary>
+</member>
+<member name="P:K1Library.clsSysInfo.K1Configuration">
+ <summary>
+ The K1 Configuration Object
+ </summary>
+</member>
+<member name="P:K1Library.clsSysInfo.Methods">
+ <summary>
+ All the K1 methods indexed by UIID (Use clsMethod.enumMethods for dictionary key)
+ </summary>
+</member>
+<member name="P:K1Library.clsSysInfo.SecurityGroups">
+ <summary>
+ All the Security Groups indexed by ID
+ </summary>
+</member>
+<member name="M:K1Library.clsSysInfo.AssignFieldLink(K1Library.clsTable,K1Library.clsFieldLink,K1Library.clsTable)">
+ <summary>
+ Updates the field link collections when creating a new field link
+ </summary>
+</member>
+<member name="M:K1Library.clsSysInfo.UpdateSystemFieldLinks(K1Library.clsFieldLink,K1Library.clsTable)">
+ <summary>
+ Updates the field link collections when creating a new field link
+ </summary>
+</member>
+<member name="M:K1Library.clsSysInfo.UpdateSystemFields(K1Library.clsField)">
+ <summary>
+ Updates the field collections when creating a new field
+ </summary>
+</member>
+<member name="M:K1Library.clsSysInfo.DRMInsertUpdateField(K1Library.clsTable,K1Library.clsField)">
+ <summary>
+ Updates the field collections when creating a new field
+ </summary>
+</member>
+<member name="M:K1Library.clsSysInfo.DRMInsertUpdateFieldLink(K1Library.clsTable,K1Library.clsFieldLink)">
+ <summary>
+ Updates the field link collections when creating a new field link
+ </summary>
+</member>
+<member name="M:K1Library.clsSysInfo.DRMInsertUpdateTable(K1Library.clsTable)">
+ <summary>
+ Updates the table collections when creating a new table
+ </summary>
+</member>
+<member name="M:K1Library.clsSysInfo.DRMDeleteField(K1Library.clsTable,K1Library.clsField)">
+ <summary>
+ Updates the field collections when deleting a field
+ </summary>
+</member>
+<member name="M:K1Library.clsSysInfo.DRMDeleteFieldLink(K1Library.clsFieldLink)">
+ <summary>
+ Updates the field link collections when deleting a field link
+ </summary>
+</member>
+<member name="M:K1Library.clsSysInfo.DRMDeleteTable(K1Library.clsTable)">
+ <summary>
+ Updates the table collections when deleting a table
+ </summary>
+</member>
+<member name="P:K1Library.clsDB_System.Security">
+ <summary>
+ Set this property if you want all objects created with this class to have a default security
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.BackupDatabase(System.String)">
+ <summary>
+ Backs up the database to the specified path
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.GetColumnBySQL(System.String)">
+ <summary>
+ Returns the first column in the first row of the returned query
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.GetColumnBySQL(System.String,System.Int32)">
+ <summary>
+ Returns the specified column in the first row of the returned query
+ </summary>
+ <param name="strSQL">Query to perform</param>
+ <param name="intColumnIndex">Index of the column for the value that will be returned</param>
+</member>
+<member name="M:K1Library.clsDB_System.GetColumnBySQL(System.String,System.String)">
+ <summary>
+ Returns the column specified by its name in the first row of the returned query
+ </summary>
+ <param name="strSQL">Query to perform</param>
+ <param name="strColumnName">Name of the column for the value that will be returned</param>
+</member>
+<member name="M:K1Library.clsDB_System.GetColumnBySQL(System.String,K1Library.clsDBParameterDictionary)">
+ <summary>
+ Returns the first column in the first row of the returned query
+ </summary>
+ <param name="strSQL">Query to perform</param>
+ <param name="colParams">Dictionary of input parameters for the query</param>
+</member>
+<member name="M:K1Library.clsDB_System.GetColumnBySQL(System.String,K1Library.clsDBParameterDictionary,System.Int32)">
+ <summary>
+ Returns the specified column in the first row of the returned query
+ </summary>
+ <param name="strSQL">Query to perform</param>
+ <param name="colParams">Dictionary of input parameters for the query</param>
+ <param name="intColumnIndex">Index of the column for the value that will be returned</param>
+</member>
+<member name="M:K1Library.clsDB_System.GetColumnBySQL(System.String,K1Library.clsDBParameterDictionary,System.String)">
+ <summary>
+ Returns the column specified by its name in the first row of the returned query
+ </summary>
+ <param name="strSQL">Query to perform</param>
+ <param name="colParams">Dictionary of input parameters for the query</param>
+ <param name="strColumnName">Name of the column for the value that will be returned</param>
+</member>
+<member name="M:K1Library.clsDB_System.GetColumnBySQL(System.String,K1Library.clsDBParameterDictionary,System.Int32,System.String)">
+ <summary>
+ Returns the column specified by either its index or name in the first row of the returned query
+ </summary>
+ <param name="strSQL">Query to perform</param>
+ <param name="colParams">Dictionary of input parameters for the query</param>
+ <param name="intColumnIndex">Index of the column for the value that will be returned</param>
+ <param name="strColumnName">Name of the column for the value that will be returned</param>
+ <remarks>
+ If a Column Index and Column name is provided then as long as the index is greater than or equal to zero
+ it will be used over the column name. This is due to accessing a column value is faster using an index 
+ then column name.
+ </remarks>
+</member>
+<member name="M:K1Library.clsDB_System.IsSnapshotEnabled">
+ <summary>
+ Checks if the Read Committed Snapshots (new isolation level for transaction) is enabled for the current database.
+ </summary>
+ <remarks>This is used by the database updater.</remarks>
+</member>
+<member name="M:K1Library.clsDB_System.EnableSnapshot">
+ <summary>
+ Enables Read Committed Snapshots (new isolation level for transaction) for the current database.
+ </summary>
+ <remarks>This is used by the database updater.</remarks>
+</member>
+<member name="M:K1Library.clsDB_System.EnableBroker">
+ <summary>
+ Sets up the SQL Notification Broker for the current database given the required privileges to the current user.
+ </summary>
+ <remarks>This is used by the database updater.</remarks>
+</member>
+<member name="M:K1Library.clsDB_System.KillDatabaseConnections">
+ <summary>
+ Kills all active connections for the currently used database.
+ </summary>
+ <remarks>
+ If current connection is using the specified database then 
+ the current connection will not be killed.
+ </remarks>
+</member>
+<member name="M:K1Library.clsDB_System.KillDatabaseConnections(System.String)">
+ <summary>
+ Kills all active connections for a specified database.
+ </summary>
+ <param name="strDatabase">Name of database to kill connections for.</param>
+ <remarks>
+ If current connection is using the specified database then 
+ the current connection will not be killed.
+ </remarks>
+</member>
+<member name="M:K1Library.clsDB_System.CreateTable(System.String)">
+ <summary>
+ Creates a table with an identity field
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.DeleteTable(System.String)">
+ <summary>
+ Deleted the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.TableExists(System.String)">
+ <summary>
+ Checks if the table name exists in the database
+ </summary>
+ <param name="strTableName">Name of table we are looking for</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.RenameTable(System.String,System.String)">
+ <summary>
+ Renames the specified table if the new table name does not already exist in the database
+ </summary>
+ <param name="strOldName">Name of the table we want to rename</param>
+ <param name="strNewName">New name of the table</param>
+ <remarks>
+ A NullReferenceException is thrown if strTable does not match the DatabaseName property case.
+ An Exception is thrown if the new table name already exist.
+ </remarks>
+</member>
+<member name="M:K1Library.clsDB_System.RenameNonRecFindTable(System.String,System.String)">
+ <summary>
+ Renames the specified table if the new table name does not already exist in the database
+ </summary>
+ <param name="strOldName">Name of the table we want to rename</param>
+ <param name="strNewName">New name of the table</param>
+</member>
+<member name="M:K1Library.clsDB_System.FindTables(System.String[])">
+ <summary>
+ Checks if the range of tables exist in the database
+ </summary>
+ <param name="arrTableNames">Name of the table that the field might exist on</param>
+ <returns>datatable of tables that do exist</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.CreateField(System.String,System.String)">
+ <summary>
+ Creates a field in the specified table
+ </summary>
+ <param name="strFieldDeclaration">The field to create (Ex. [Description] NVARCHAR(100) NULL)</param>
+</member>
+<member name="M:K1Library.clsDB_System.CreateField(K1Library.clsTable,K1Library.clsField,System.String)">
+ <summary>
+ Creates a field in the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.DeleteField(System.String,System.String)">
+ <summary>
+ Deletes the field from the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.DeleteField(K1Library.clsField)">
+ <summary>
+ Deletes the field from the specified table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.UpdateField(System.String,System.String)">
+ <summary>
+ Updates the field in the specified table (will fail if indexes are not removed first)
+ </summary>
+ <param name="strFieldDeclaration">The field to modify (Ex. [Description] NVARCHAR(200) NULL)</param>
+</member>
+<member name="M:K1Library.clsDB_System.UpdateField(K1Library.clsField,System.String)">
+ <summary>
+ Deletes indexes and default constraint, updates the field, recreates indexes
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.GetFieldDeclaration(K1Library.clsField)">
+ <summary>
+ takes a field class and converts it to a SQL column declaration
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.GetFieldDeclaration(System.String,System.Data.SqlDbType)">
+ <summary>
+ Generates a SQL column declaration
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.GetFieldDeclaration(System.String,System.Data.SqlDbType,System.Boolean)">
+ <summary>
+ Generates a SQL column declaration
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.GetFieldDeclaration(System.String,System.Data.SqlDbType,System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ Generates a SQL column declaration
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.FieldExists(System.String,System.String)">
+ <summary>
+ Checks if the field exists on the specified table
+ </summary>
+ <param name="strTableName">Name of the table that the field might exist on</param>
+ <param name="strFieldName">Name of the field we are looking for</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.RenameRecFindField(System.String,System.String,System.String)">
+ <summary>
+ Renames the specified RecFind field if the new field name does not already exist in a given table 
+ </summary>
+ <param name="strTableName">Name of the table that the field is in</param>
+ <param name="strFieldName">Name of the field we want to rename</param>
+ <param name="strNewName">New name of the field</param>
+ <remarks>
+ A NullReferenceException is thrown if strTable does not match the DatabaseName property case.
+ A NullReferenceException is thrown if strField does not match the DatabaseName property case.
+ An Exception is thrown if the new field name already exists in the table.
+ </remarks>
+</member>
+<member name="M:K1Library.clsDB_System.RenameField(System.String,System.String,System.String)">
+ <summary>
+ Renames the specified field if the new field name does not already exist in a given table 
+ </summary>
+ <param name="strTableName">Name of the table that the field is in</param>
+ <param name="strFieldName">Name of the field we want to rename</param>
+ <param name="strNewName">New name of the field</param>
+</member>
+<member name="M:K1Library.clsDB_System.FindFields(System.String,System.String[])">
+ <summary>
+ Checks if the field exists on the specified table
+ </summary>
+ <param name="strTableName">Name of the table that the field might exist on</param>
+ <param name="arrFieldNames">Names of the field we are looking for</param>
+ <returns>Datatable of fields found</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.DeleteStoredProcedure(System.String)">
+ <summary>
+ Remove the stored procedure from the database
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CheckStoredProcedureExists(System.String)">
+ <summary>
+ Checks whether a stored procedure already exists in the database with the specified name
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CreateStoredProcedure(System.String,System.String)">
+ <summary>
+ Creates the specified stored procedure
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CreateStoredProcedure(System.String,System.String,System.String)">
+ <summary>
+ Creates the specified stored procedure
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.StandardSPDeclaration(System.String,System.String)">
+ <summary>
+ Starting declaration for a stored procedure
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.FindStoredProcedures(System.String)">
+ <summary>
+ Returns the name of all stored procedures whose name matches the given criteria
+ </summary>
+ <param name="strCriteria"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.StoredProcedureExists(System.String)">
+ <summary>
+ Checks if the stored procedure exists.
+ </summary>
+ <param name="strSPName">Name of the Stored Procedure that we are looking for.</param>
+ <returns>Returns True if the stored procedure exists;Otherwise False.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.DeleteFunction(System.String)">
+ <summary>
+ Remove the function from the database
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.FindFunctions(System.String)">
+ <summary>
+ Returns the name of all functions whose name matches the given criteria
+ </summary>
+ <param name="strCriteria"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.FunctionExists(System.String)">
+ <summary>
+ Checks if the function exists.
+ </summary>
+ <param name="strFunctionName">Name of the function that we are looking for.</param>
+ <returns>Returns True if the funtion exists;Otherwise False.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.CreateTrigger(K1Library.clsMaskFieldDictionary)">
+ <summary>
+ Creates a trigger in the database
+ </summary>
+ <param name="colMaskObjs">clsMaskFieldDictionary of the Trigger table record for the trigger</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.CreateTrigger(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+ <summary>
+ Creates a trigger in the database
+ </summary>
+ <param name="strTableName">Name of the table that the trigger is binding to</param>
+ <param name="strTriggerName">Name of the trigger</param>
+ <param name="strBody">SQL body of the trigger</param>
+ <param name="strTriggerAction">Action trigger performs (possible values I or F or A)</param>
+ <param name="blnOnInsert">Does the trigger execute on an Insert?</param>
+ <param name="blnOnUpdate">Does the trigger execute on an Update?</param>
+ <param name="blnOnDelete">Does the trigger execute on an Delete?</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.DropTrigger(System.String)">
+ <summary>
+ Drops the specified trigger from the database
+ </summary>
+ <param name="strTriggerName">name of the trigger we want to drop</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.RenameTrigger(System.String,System.String)">
+ <summary>
+ Renames a trigger in the database
+ </summary>
+ <param name="strOldName">Current name of the trigger in the database</param>
+ <param name="strNewName">New name of the trigger</param>
+ <remarks>
+ sp_rename does not work with triggers (as it does not update syscomments) 
+ so they must be dropped and recreated when renaming.
+ </remarks>
+</member>
+<member name="M:K1Library.clsDB_System.TriggerExists(System.String)">
+ <summary>
+ Checks if the trigger exists
+ </summary>
+ <param name="strTriggerName">Name of the trigger we are looking for</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.DeleteView(System.String)">
+ <summary>
+ Remove the view from the database
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.ViewExists(System.String)">
+ <summary>
+ Checks if the view exists in the database
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.DropDefaultConstraint(K1Library.clsField)">
+ <summary>
+ Removes the default value constraint from a field if one exists
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.DropDefaultConstraint(System.String,System.String)">
+ <summary>
+ Removes the default value constraint from a field if one exists
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.DeleteForeignKey(K1Library.clsField,K1Library.clsTable)">
+ <summary>
+ Removes a foreign key relationship
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.DeleteForeignKey(System.String,System.String,System.String)">
+ <summary>
+ Removes a foreign key relationship
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CreateForeignKey(K1Library.clsField,K1Library.clsTable)">
+ <summary>
+ Creates a foreign key relationship
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CreateForeignKey(System.String,System.String,System.String,K1Library.clsDB_System.ConstraintAction)">
+ <summary>
+ Creates a foreign key relationship
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.RenameTableInForeignKey(System.String,System.String)">
+ <summary>
+ Renames foreign keys that are bound to a specified table
+ </summary>
+ <param name="strTableName">Name of table that FKs are bound to</param>
+ <param name="strNewTableName">New name of table</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.RenameFieldInForeignKey(System.String,System.String,System.String)">
+ <summary>
+ Renames foreign keys that are bound to a specified table and field
+ </summary>
+ <param name="strTableName">Name of table that FKs are bound to</param>
+ <param name="strFieldName">Name of the field that the FKs are bound to</param>
+ <param name="strNewFieldName">New name of the field</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.RenameForeignKey(System.String,System.String)">
+ <summary>
+ Renames the specified foreign key
+ </summary>
+ <param name="strOldName">Current name of the foreign key (format FK_[Foreign Field]_[Foreign Table]_[Identity Table])</param>
+ <param name="strNewName">New name of the foreign key (format FK_[Foreign Field]_[Foreign Table]_[Identity Table])</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.FindAllForeignKeys(System.String)">
+ <summary>
+ Finds all Foreign Keys for the specified Table
+ </summary>
+ <param name="strTableName">Name of the table (If nothing or empty will be treated as '%')</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.FindForeignKeys(System.String,System.String,System.String)">
+ <summary>
+ Finds all Foreign Keys for the specified Identity Table or Foreign Table and Field
+ </summary>
+ <param name="strForeignTableName">Name of the foreign table (If nothing or empty will be treated as '%')</param>
+ <param name="strForeignFieldName">Name of the foreign field (If nothing or empty will be treated as '%')</param>
+ <param name="IdentityTableName">Name of the identity table (If nothing or empty will be ignored)</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.CreateStandardSPs(K1Library.clsTable)">
+ <summary>
+ Creates all the standard stored procedures for a table depending on the table class
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.DeleteStandardSPs(K1Library.clsTable)">
+ <summary>
+ Deletes all the standard stored procedures for a table depending on the table class
+ </summary>
+ <param name="objTable"></param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDB_System.IsValidGetListType(System.Data.SqlDbType)">
+ <summary>
+ Determines whether the datatype is included in the GetList stored procedure
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.DataTypeUsesLike(System.Data.SqlDbType)">
+ <summary>
+ Determines whether the datatype uses 'LIKE' or '=' for equality operations
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CreateSPInsert(K1Library.clsTable)">
+ <summary>
+ Creates the Insert Stored Procedure for a standard table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CreateSPUpdate(K1Library.clsTable)">
+ <summary>
+ Creates the Update Stored Procedure for a standard table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CreateSPGetItem(K1Library.clsTable)">
+ <summary>
+ Creates the GetItem Stored Procedure for a standard table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CreateSPGetList(K1Library.clsTable)">
+ <summary>
+ Creates the GetList Stored Procedure for a standard table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CreateSPDelete(K1Library.clsTable)">
+ <summary>
+ Creates the Delete Stored Procedure for a standard table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CreateLinkSPInsert(K1Library.clsTable)">
+ <summary>
+ Creates the Insert Stored Procedure for a link table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CreateLinkSPGetList(K1Library.clsTable)">
+ <summary>
+ Creates the GetList Stored Procedure for a standard table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.CreateLinkSPDelete(K1Library.clsTable)">
+ <summary>
+ Creates the Delete Stored Procedure for a standard table
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.GetDatabaseDetails">
+ <summary>
+ Returns information about the current database.
+ Returned Columns:
+ ServerName - Name of the Server the database is on
+ DatabaseName - Name of database
+ CreationDate - Date the database was created
+ SpaceUsedMB - Amount of space in MegaBytes that the database is using on the file system
+ FreeSpaceMB - Amount of space in MegaBytes unused by the database
+ DataFileName - File name of the data file for the database
+ LastBackupDate - The date the database was last backed up
+ BackupSizeMB - The size of the backup file it when it was last backed up
+ DurationInSec -  The total time in seconds it took to back up the database
+ BackupFileName - The physical device name of the last backup file
+ </summary>
+</member>
+<member name="M:K1Library.clsDB_System.IsBrokerEnabled">
+ <summary>
+ Checks if the SQL Notification Broker is enabled for the database.
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.GetTableIndexes(K1Library.clsDB_System,System.String)">
+ <summary>
+ Retrieves a list of indexes pertaining to a particular table
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.GetTableIndexes(K1Library.clsDB_System,System.String,System.String)">
+ <summary>
+ Retrieves a list of indexes pertaining to a particular table and field
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.FormatDescription(System.String,System.Boolean@,System.Boolean@,System.Boolean@,System.Boolean@)">
+ <summary>
+ Breaks down the "index_description" returned from sp_helpindex to find the indexes
+ attributes
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.Create(K1Library.clsDB_System)">
+ <summary>
+ Creates the index
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.CreateIndex(K1Library.clsDB_System,K1Library.clsTableIndex)">
+ <summary>
+ Creates an index using the tableindex object provided
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.DropIndex(K1Library.clsDB_System)">
+ <summary>
+ Removes an index from the database
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.DropIndex(K1Library.clsDB_System,System.String,System.String)">
+ <summary>
+ Removes an index from the database
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.DropConstraintIndex(K1Library.clsDB_System)">
+ <summary>
+ Removes a unique index from the table
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.DropConstraintIndex(K1Library.clsDB_System,System.String,System.String)">
+ <summary>
+ Removes the Primary Key from the table
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.DropIndexes(K1Library.clsDB_System,K1Library.clsField)">
+ <summary>
+ Removes all indexes pertaining to a particular table
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.DropIndexes(K1Library.clsDB_System,System.String,System.String)">
+ <summary>
+ Removes all indexes pertaining to a particular table (and field)
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.RenameIndex(K1Library.clsDB_System,System.String,System.String,System.String,System.String)">
+ <summary>
+ Renames an index in the database
+ </summary>
+ <param name="strTableName">Name of the table the index is on</param>
+ <param name="strFieldName">Name of the field the index is bound to</param>
+ <param name="strNewTableName">New Name of the table the index is on (If Null or Empty then same as strTableName)</param>
+ <param name="strNewFieldName">New Name of the field the index is bound to (If Null or Empty then same as strFieldName)</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsTableIndex.RenameIndex(K1Library.clsDB_System,System.String,K1Library.clsTableIndex,System.String,System.String)">
+ <summary>
+ Renames an index in the database
+ </summary>
+ <param name="strTableName">Name of the table the index is on</param>
+ <param name="objIndex">The existing index</param>
+ <param name="strNewTableName">New Name of the table the index is on (If Null or Empty then same as strTableName)</param>
+ <param name="strNewFieldName">New Name of the field the index is bound to (If Null or Empty then same as strFieldName)</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsTableIndex.RenameIndex(K1Library.clsDB_System,System.String,System.String,System.String)">
+ <summary>
+ Renames an index in the database
+ </summary>
+ <param name="strTableName">Name of the table the index is on</param>
+ <param name="strOldName">Current name of the index (In the format IX_[Table Name]_[Field Name]</param>
+ <param name="strNewName">New name for the index (In the format IX_[Table Name]_[Field Name]</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsTableIndex.RenameTableIndexes(K1Library.clsDB_System,System.String,System.String)">
+ <summary>
+ Renames all the indexes for a specified table
+ i.e. replace strTableName with strNewName in the index name
+ </summary>
+ <param name="strTableName">Name of the table the index is on</param>
+ <param name="strNewName">New name for the table the index is on</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsTableIndex.RenameFieldIndexes(K1Library.clsDB_System,System.String,System.String,System.String)">
+ <summary>
+ Renames all the indexes for a specified table and field
+ i.e. replace strFieldName with strNewFieldName in the index name
+ </summary>
+ <param name="strTableName">Name of the table the index is on</param>
+ <param name="strFieldName">Name of the field the index is bound to</param>
+ <param name="strNewFieldName">New name for the field the index is bound to</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsTableIndex.CreateForeignKeyIndex(K1Library.clsDB_System,K1Library.clsField)">
+ <summary>
+ Indexes a foreign key field for faster access
+ </summary>
+</member>
+<member name="M:K1Library.clsTableIndex.CreateForeignKeyIndex(K1Library.clsDB_System,System.String,System.String)">
+ <summary>
+ Indexes a foreign key field for faster access
+ </summary>
+</member>
+<member name="M:K1Library.Database.K1DataService.SelectBetween(K1Library.clsTable,K1Library.clsSearchFilter,K1Library.clsSortCollection,System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ Returns IDs of Records between two Records
+ </summary>
+ <param name="table"></param>
+ <param name="filter"></param>
+ <param name="sortBy"></param>
+ <param name="pageStartRecordId"></param>
+ <param name="pageEndRecordId"></param>
+ <param name="ignoreSecurity"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.Database.K1DataService.SelectFind(K1Library.clsTable,K1Library.clsSortCollection,K1Library.clsSearchFilter,K1Library.clsSearchElement)">
+ <summary>
+ Returns IDs of records that matches the criteria in search filter and search element combined
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.Database.K1DataService.SelectInternal(K1Library.clsTable,K1Library.clsSortCollection,K1Library.clsSearchFilter,System.Int32,System.Boolean,K1Library.clsMaskFieldDictionary,System.Boolean,K1Library.clsSelectInfo.enumSelectType,System.Int32,System.Boolean,System.String[])">
+ <summary>
+ 
+ </summary>
+ <param name="table"></param>
+ <param name="sortBy"></param>
+ <param name="filter"></param>
+ <param name="pageSize"></param>
+ <param name="forward"></param>
+ <param name="startRecord"></param>
+ <param name="includeReferencedRecord"></param>
+ <param name="selectType">'selectType can be enumSelectType.PAGE or enumSelectType.COUNT_TO_REC</param>
+ <param name="typeID"></param>
+ <param name="ignoreSecurity"></param>
+ <param name="selectFields"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.FilterClasses.K1QueryFilterFactory.CreateSearchCondition``1(K1Library.clsSearchFilter.enumComparisonType,System.String,System.Collections.Generic.KeyValuePair{System.String,``0})">
+ <summary>
+ Create a single search condition i.e table.Column = var etc...
+ </summary>
+ <param name="comparitor"></param>
+ <param name="tableName"></param>
+ <param name="condition"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDRMScheduledTask.#ctor(K1Library.clsDB,System.String)">
+ <summary>
+ Get an existing scheduled task
+ </summary>
+ <param name="objDB"></param>
+ <param name="strStoredProcedure"></param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDRMScheduledTask.InsertUpdate">
+ <summary>
+ Inserts or updates a scheduled task in to the system
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDRMScheduledTask.Delete">
+ <summary>
+ Deletes a scheduled task from the system
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDRMTableMethod.#ctor(K1Library.clsDB,K1Library.clsTable,K1Library.clsMethod,System.Boolean,System.Boolean,System.Collections.Generic.List{System.Int32})">
+ <summary>
+ Creates a new table method
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMTableMethod.#ctor(K1Library.clsDB,K1Library.clsTable,K1Library.clsMethod.enumMethods)">
+ <summary>
+ Creates a new table method
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMTableMethod.#ctor(K1Library.clsDB,K1Library.clsTableMethod,System.Int32)">
+ <summary>
+ Creates a DRMTableMethod from an existing tablemethod database object
+ </summary>
+</member>
+<member name="P:K1Library.clsAuditTrailRecordData.Filter">
+ <summary>
+ Search filter used by the user.
+ </summary>
+</member>
+<member name="P:K1Library.clsAuditTrailRecordData.OriginalRecord">
+ <summary>
+ Original values of the record.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:K1Library.clsAuditTrailRecordData.NewRecord">
+ <summary>
+ The new values for the record (update only)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsAuditTrailRecordData.ToString">
+ <summary>
+ Returns the XML representation of this AuditTrailRecordData
+ </summary>
+ <returns>A System.String of XML</returns>
+</member>
+<member name="M:K1Library.clsAuditTrailRecordData.SerializeToXml(System.Boolean)">
+ <summary>
+ Serializes the record data to XML and saves to a file
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsAutoAbstractBuilder.SetText(System.String)">
+ <summary>
+ Sets given text as the text to build the abstract from.
+ </summary>
+ <param name="strText">Text to set for abstracting.</param>
+</member>
+<member name="M:K1Library.clsAutoAbstractBuilder.LoadText(System.String)">
+ <summary>
+ Uses the extracted text from the given file to build the abstract from.
+ </summary>
+ <param name="strFilePath">Full path to the file to abstract.</param>
+</member>
+<member name="M:K1Library.clsAutoAbstractBuilder.Build">
+ <summary>
+ Builds an abstract from the given text and seed list.
+ </summary>
+ <returns>Abstract of given text.</returns>
+</member>
+<member name="M:K1Library.clsAutoAbstractBuilder.DoAutoAbstract(System.String,K1Library.FrameworkCollections.K1Dictionary{System.Int32},System.Collections.Generic.List{System.String},System.Boolean,System.Int64)">
+ <summary>
+ Main Function that performs auto abstracting. We assume that keywords and stop words
+ are case insentive and we are matching only whole words to them.
+ (Deprecated see Build)
+ </summary>
+ <param name="strBody">Body of text.</param>
+ <param name="dicSeedList">Seed list used to determine the importance of sentences.</param>
+ <param name="colStopWords">Words that are considered noise.</param>
+ <param name="blnRemoveStopWords">Should stop words be removed from the the final abstract.</param>
+ <param name="intMaxSentences">Maximum number of sentences to include in the abstract.</param>
+ <returns></returns>
+ <remarks>
+ This function is left only to support compatability with products using the old code. All products should 
+ use Build instead.
+ </remarks>
+</member>
+<member name="M:K1Library.clsAutoAbstractBuilder.InitaliseSentenceCollection">
+ <summary>
+ Splits the text extracted from the document into sentences and builds an index 
+ ordering the Hit Score in ascending order. i.e. most relevant last
+ </summary>
+ <remarks>We consider End of Sentence (EOS) punctuation as either . or ? or ! or tab or carriage return.</remarks>
+</member>
+<member name="M:K1Library.clsAutoAbstractBuilder.AddSentence(System.String,System.Int64,System.Collections.Generic.List{System.String})">
+ <summary>
+ Adds the sentence to the default list and orders it by its hit score. 
+ </summary>
+ <param name="strSentence">Sentence to add to the list.</param>
+ <param name="intHitScore">Hit Score value of the sentence.</param>
+ <param name="colFoundWords">Seed words found in the sentence.</param>
+</member>
+<member name="M:K1Library.clsAutoAbstractBuilder.AddSentence(System.Collections.Generic.List{K1Library.clsSentence},System.Collections.Generic.SortedList{System.Int64,System.Collections.Generic.List{System.Int32}},K1Library.clsSentence)">
+ <summary>
+ Adds the sentence to the given list and orders it by its hit score. 
+ </summary>
+ <param name="colSentenceCollection"></param>
+ <param name="colHitScoreIndex"></param>
+ <param name="objSentence"></param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsAutoAbstractBuilder.RemoveHighestSentence">
+ <summary>
+ Removes the sentence with the highest hit score from the list.
+ </summary>
+ <remarks>
+ When a sentence is removed from the list the seed words are also removed.
+ This means that sentences that share seed words need their hit score recalculated
+ and those that are no longer relevant (i.e. hit score = 0) are also removed.
+ </remarks>
+</member>
+<member name="M:K1Library.clsAutoAbstractBuilder.GetHitScore(System.String,System.Collections.Generic.List{System.String}@)">
+ <summary>
+ Calculates a sentence's relevance score given a dictionary of seed words
+ and their value. 
+ </summary>
+ <param name="strSentence">Sentence that a hit score should be calculate for.</param>
+ <param name="colFoundWords">List of seed list words found in the sentence.</param>
+ <returns>relevance score of string.</returns>
+ <remarks>
+ We assume that keywords are case insentive and we are matching only
+ whole words to them. Higher score = more relevant keywords found.
+ </remarks>
+</member>
+<member name="M:K1Library.clsAutoAbstractBuilder.RemoveStopWordsFromAbstract(System.String)">
+ <summary>
+ Removes stop words from the final abstract. 
+ </summary>
+ <param name="strAbstract">The abstract text to remove stop words from.</param>
+ <returns>New abstract without stop words.</returns>
+ <remarks>
+ We assume that stop words are case insentive and we are matching
+ only whole words to them.
+ </remarks>
+</member>
+<member name="M:K1Library.clsSentence.RemovePunctuations(System.String)">
+ <summary>
+ Removes unwanted punctuations so we can match words correctly against each other.
+ Currently only removes "," and "."
+ </summary>
+ <param name="strSentence"></param>
+</member>
+<member name="M:K1Library.Licensing.clsActivationKey.ServerCompareName(System.String,System.String,System.String,System.String)">
+ <summary>
+ Compare a server name, use a group name if one exists
+ </summary>
+ <param name="strServerName"></param>
+ <param name="strServerCheckName"></param>
+ <param name="strGroupOrServerName"></param>
+ <returns></returns>
+ 
+</member>
+<member name="M:K1Library.Licensing.clsActivationKey.StringUpto(System.String,System.Char)">
+ <summary>
+ Return that portion of the string that precedes a character 
+ </summary>
+ <param name="strS">String to compare</param>
+ <param name="chC">Character that delimits the string you want</param>
+ <returns></returns>
+</member>
+<member name="M:K1Library.clsEdocRepository.GetEdocFile(K1Library.clsEDOC)">
+ <summary>
+ This will fetch the image file from the database and store it in a temp location.
+ </summary>
+ <param name="objEdoc">EDOC object that represents an EDOC record.</param>
+ <returns>temp file path and name</returns>
+ <remarks>Please please delete the temp file once you are done with it. Do not leave it behind.</remarks>
+</member>
+<member name="M:K1Library.clsEdocRepository.UpdateEdocFile(System.Int32,System.IO.FileInfo,System.Boolean,System.Boolean)">
+ <summary>
+ This method updates the blob and related image natural metadata fields.
+ </summary>
+ <param name="edocId">EDOC Id that represents an EDOC record ID.</param>
+ <param name="objFileInfo">imaging document file to convert to blob.</param>
+ <returns>True for success</returns>
+ <remarks>Unlocking of the EDOC has to be done by the calling code if blnUseLocking is True</remarks>
+</member>
+<member name="M:K1Library.clsEdocRepository.ClearEdocImage(System.Int32,System.Boolean)">
+ <summary>
+ Clears the EDOC image field
+ </summary>
+ <param name="edocId"></param>
+ <param name="blnUseLocking"></param>
+ <remarks>Unlocking of the EDOC has to be done by the calling code if blnUseLocking is True</remarks>
+</member>
+<member name="P:K1Library.clsField.IsComputedField">
+ <summary>
+ Used when the field does not map to a physical column but to a scalar function in the database 
+ i.e. select *, {tablename}_ComputedField( [{tablename}].[ID] ) as CaptionText from {tablename}
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:K1Library.clsField.ComputeFunction">
+ <summary>
+ Used when the field does not map to a physical column but to a scalar function in the database 
+ i.e. select *, {tablename}_ComputedField( [{tablename}].[ID] ) as CaptionText from {tablename}
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:K1Library.clsFieldLink.IdentityTable">
+ <summary>
+ The Table the Foreign Key field is pointing to.
+ </summary>
+</member>
+<member name="P:K1Library.clsFieldLink.LinkTableOppositeFieldLink">
+ <summary>
+ This will return the other field link (foreign key) of the link table
+ </summary>
+</member>
+<member name="P:K1Library.clsFieldLink.LinkedTable">
+ <summary>
+ If the foreign key table is a link table link, 
+ this will return the other table in the many-to-many relationship
+ </summary>
+</member>
+<member name="P:K1Library.clsFieldLink.ForeignKeyTable">
+ <summary>
+ This will be the table that contains the foreign key.
+ </summary>
+</member>
+<member name="M:K1Library.clsTable.GetField(System.String)">
+ <summary>
+ Returns the field that matches the specified database name.
+ </summary>
+ <param name="strDatabaseName">Database name of field that should be returned.</param>
+ <returns>Returns clsField if match found; otherwise Nothing</returns>
+</member>
+<member name="M:K1Library.clsTable.GetFieldLink(System.String)">
+ <summary>
+ Returns the field link whos foreign key field matches the specified database name.
+ </summary>
+ <param name="strDatabaseName">Database name of foreign key field of the field link that should be returned.</param>
+ <returns>Returns clsFieldLink if match found; otherwise Nothing</returns>
+</member>
+<member name="T:K1Library.clsUserProfile">
+ <summary>
+ This class represents the table Profile in the Database.
+ </summary>
+ 
+</member>
+<member name="M:K1Library.clsUserProfile.GetItemFromLogin(K1Library.clsDB,System.String,System.String,System.Func{System.String,System.String,System.Boolean},System.Nullable{K1Library.clsDBConstants.enumPasswordType})">
+ <summary>
+ Authenticates user and fetches the user profile from the data store.
+ </summary>
+ <param name="objDB">Data access object. It can be encapsulating a direct Ado.net connection or web services.</param>
+ <param name="strUserName">user name in plain text</param>
+ <param name="strPassword">password in plain text</param>
+ <param name="authenticator">authenticator use this when the data access object encapsulates web services. I.E clsDB_WS has a member called AuthenticateUser</param>
+ <param name="enumPasswordType">nullable enum, used to determine if logging in with a recfind or an active directory account</param>
+ <returns>Current authenticated user profile from data store or active directory.</returns>
+ <remarks>Uses Active Directory or data store to authenticate user.</remarks>
+</member>
+<member name="M:K1Library.clsUserProfile.GetSecurityWhereClause(System.String)">
+ <summary>
+ For use with SQL or RowFilter of a dataview
+ </summary>
+</member>
+<member name="T:K1Library.clsDRMField">
+ <summary>
+ Used to create or update a field using the DRM
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMField.#ctor(K1Library.clsDB,K1Library.clsTable,System.String,System.Data.SqlDbType,System.String,System.Int32)">
+ <summary>
+ Creates a new field
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMField.#ctor(K1Library.clsDB,K1Library.clsTable,K1Library.clsDRMField.enumStandardField,System.Int32)">
+ <summary>
+ Creates a new standard field (ID, ExternalID, TypeID, SecurityID)
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMField.#ctor(K1Library.clsDB,K1Library.clsTable,System.String,System.String,System.Int32,System.Boolean,System.String,System.Int32,System.Boolean)">
+ <summary>
+ Creates a new linked field
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMField.#ctor(K1Library.clsDB,K1Library.clsField)">
+ <summary>
+ Creates a DRM Field from an existing field database object
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMField.MakeForeignKey(System.String,System.Boolean,System.String,System.Int32)">
+ <summary>
+ Function to make a foreign key out of a new field
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMTable.#ctor(K1Library.clsDB,System.String,System.Int32,System.String,K1Library.clsDBConstants.enumTableClass,System.Boolean,System.String,System.Boolean)">
+ <summary>
+ Creates a new table
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMTable.#ctor(K1Library.clsDB,K1Library.clsTable)">
+ <summary>
+ Creates a DRM Field from an existing field database object
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMTable.MakeTrigger(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String)">
+ <summary>
+ Create a trigger for the table in K1
+ </summary>
+ <param name="strTriggerName">Database name of the trigger</param>
+ <param name="strTriggerBody">SQL body of the trigger</param>
+ <param name="strTriggerAction">Trigger execution action</param>
+ <param name="blnOnInsert">Execute trigger on Insert?</param>
+ <param name="blnOnUpdate">Execute trigger on Update?</param>
+ <param name="blnOnDelete">Execute trigger on Delete?</param>
+ <param name="strExternalID">ExternalID for the Trigger in "Trigger" table</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDRMTable.MakeTrigger(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String,System.Int32)">
+ <summary>
+ Create a trigger for the table in K1
+ </summary>
+ <param name="strTriggerName">Database name of the trigger</param>
+ <param name="strTriggerBody">SQL body of the trigger</param>
+ <param name="strTriggerAction">Trigger execution action</param>
+ <param name="blnOnInsert">Execute trigger on Insert?</param>
+ <param name="blnOnUpdate">Execute trigger on Update?</param>
+ <param name="blnOnDelete">Execute trigger on Delete?</param>
+ <param name="strExternalID">ExternalID for the Trigger in "Trigger" table</param>
+ <param name="intSecurityID">SecurityID for the Trigger in "Trigger" table</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDRMTable.DeleteTrigger(System.String)">
+ <summary>
+ Deletes a trigger from K1 Trigger table and the database
+ </summary>
+ <param name="strTriggerName">Name of the trigger</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDRMTrigger.#ctor(K1Library.clsDB,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String,System.Int32)">
+ <summary>
+ Create a new trigger
+ </summary>
+ <param name="objDB"></param>
+ <param name="strTableName"></param>
+ <param name="strTriggerName"></param>
+ <param name="strBody"></param>
+ <param name="strTriggerAction"></param>
+ <param name="blnOnInsert"></param>
+ <param name="blnOnUpdate"></param>
+ <param name="blnOnDelete"></param>
+ <param name="strExternalID"></param>
+ <param name="intSecurityID"></param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDRMTrigger.#ctor(K1Library.clsDB,System.String)">
+ <summary>
+ Get an existing Trigger
+ </summary>
+ <param name="objDB"></param>
+ <param name="strTriggerName"></param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDRMTrigger.InsertUpdate">
+ <summary>
+ Inserts or updates a trigger in K1 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDRMTrigger.Delete">
+ <summary>
+ Deletes a trigger from K1 and the database
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDRMTrigger.Rename(System.String,System.Boolean)">
+ <summary>
+ Renames a trigger in K1 and the database
+ </summary>
+ <param name="strNewName">New name of the trigger</param>
+ <param name="blnCreateTransaction">Will we create a transaction to rename the trigger</param>
+ <remarks>
+ sp_rename does not work with triggers (as it does not update syscomments) 
+ so they must be dropped and recreated when renaming.
+ </remarks>
+</member>
+<member name="M:K1Library.clsDRMTrigger.Exists(K1Library.clsDB,System.String)">
+ <summary>
+ Checks if a trigger exists in the trigger table of K1
+ </summary>
+ <param name="objDB"></param>
+ <param name="strTriggerName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsDRMTrigger.UpdateMaskCollection(K1Library.clsMaskFieldDictionary)">
+ <summary>
+ Updates a given clsMaskFieldDictionary with the members values of the trigger
+ </summary>
+ <param name="dicMaskField">clsMaskFieldDictionary that we want to update</param>
+ <remarks></remarks>
+</member>
+<member name="T:K1Library.clsDRMTypeField">
+ <summary>
+ Used to create or update a field using the DRM
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMTypeField.#ctor(K1Library.clsDB,K1Library.clsField,System.String,System.Int32,System.Int32,System.String,System.Boolean,K1Library.clsAutoFillInfo,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+ <summary>
+ Creates a new field
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMTypeField.#ctor(K1Library.clsDB,K1Library.clsField,K1Library.clsTypeField)">
+ <summary>
+ Creates a DRM Field from an existing field database object
+ </summary>
+</member>
+<member name="T:K1Library.clsDRMTypeFieldLink">
+ <summary>
+ Used to create or update a field using the DRM
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMTypeFieldLink.#ctor(K1Library.clsDB,K1Library.clsFieldLink,System.String,System.Int32,System.Int32,System.String,System.Boolean)">
+ <summary>
+ Creates a new field
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMTypeFieldLink.#ctor(K1Library.clsDB,K1Library.clsFieldLink,K1Library.clsTypeFieldLink)">
+ <summary>
+ Creates a DRM Field from an existing field database object
+ </summary>
+</member>
+<member name="T:K1Library.clsDRMFieldLink">
+ <summary>
+ Used to create or update a field using the DRM
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMFieldLink.#ctor(K1Library.clsDB,K1Library.clsTable,K1Library.clsField,System.Int32,System.String,System.String,System.Boolean,System.Boolean)">
+ <summary>
+ Creates a new field
+ </summary>
+</member>
+<member name="M:K1Library.clsDRMFieldLink.#ctor(K1Library.clsDB,K1Library.clsFieldLink)">
+ <summary>
+ Creates a DRM Field from an existing field database object
+ </summary>
+</member>
+<member name="P:K1Library.clsFileReader.FullText">
+ <summary>
+ Returns a string containing the all the extracted text from the file
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:K1Library.clsFileReader.GetLine(System.Int32,System.Int32)">
+ <summary>
+ Returns line(s) of text
+ </summary>
+ <param name="intLineNumber">The initial line number to be returned</param>
+ <param name="intCount">The number of consecutive lines to be returned after the initial line</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:K1Library.clsFileReader.Lines">
+ <summary>
+ Returns line(s) of text, with a soft break after 80 characters
+ </summary>
+</member>
+<member name="M:K1Library.clsFileReader.#ctor(System.String)">
+ <summary>
+ Reads the text from a file.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsFileSummary.#ctor(System.String,System.Boolean)">
+ <summary>
+[Naing] Do not use this. It is for unit testing purposes for now.
+ </summary>
+ <param name="strFileName"></param>
+ <param name="blnUnsafe"></param>
+ <remarks>Do not use for production code.</remarks>
+</member>
+<member name="P:K1Library.clsMaskFieldDictionary.TableMask">
+ <summary>
+ This is the parent table mask if one exists
+ </summary>
+</member>
+<member name="P:K1Library.clsMaskFieldDictionary.ID">
+ <summary>
+ Returns the ID value in the Mask Field Collection (if one exists)
+ </summary>
+</member>
+<member name="P:K1Library.clsMaskFieldDictionary.ExternalID">
+ <summary>
+ Returns the ExternalID value in the Mask Field Collection (if one exists)
+ </summary>
+</member>
+<member name="M:K1Library.clsMaskFieldDictionary.UpdateMaskObj(System.String,System.Object,System.Windows.Forms.CheckState)">
+ <summary>
+ Set the Mask Value
+ </summary>
+ <param name="strField"></param>
+ <param name="objValue"></param>
+ <param name="eCheckState"></param>
+ <remarks>Should be named SetMaskValue. Grrr ... who ever added this dependency to [Windows.Forms.CheckState] must be shot !!!</remarks>
+</member>
+<member name="T:K1Library.FrameworkCollections.K1Dictionary`1">
+ <summary>
+ Represents a generic collection of keys (String) and values (TValue).
+ 
+ If you have a collection of objects that you regulary use one of two keys to find it in the collection
+ use K1DualKeyDictionary as it is faster then K1Dictionary and other ICollection classes with a near O(1)
+ </summary>
+ <typeparam name="TValue">The datatype of the value you want to store in the Dictionary.</typeparam>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1Dictionary`1.#ctor">
+ <summary>
+ Initializes a new instance of the Dictionary class that is empty, has the default initial capacity
+ and uses StringComparer.Ordinal for comparing keys
+ </summary>
+</member>
+<member name="P:K1Library.FrameworkCollections.K1Dictionary`1.Item(System.String)">
+ <summary>
+ Gets or sets the value associated with the specified key.
+ </summary>
+ <param name="strKey">The key of the value to get or set.</param>
+ <returns>
+ The value associated with the specified key. If the specified key is not found, 
+ a get operation throws a System.Collections.Generic.KeyNotFoundException, 
+ and a set operation creates a new element with the specified key.
+ </returns>
+ <exception cref="T:System.ArgumentNullException">The key is null.</exception>
+ <exception cref="T:System.Collections.Generic.KeyNotFoundException">
+ The property is retrieved and key does not exist in the collection.
+ </exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1Dictionary`1.Add(System.String,`0)">
+ <summary>
+ Adds the specified key and value to the dictionary.
+ </summary>
+ <param name="strKey">The key of the element to add.</param>
+ <param name="objValue">The value of the element to add. The value can be null for reference types.</param>
+ <exception cref="T:System.ArgumentException">An element with the same key already exists in the Dictionary.</exception>
+ <exception cref="T:System.ArgumentNullException">The key is null.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1Dictionary`1.Remove(System.String)">
+ <summary>
+ Removes the value with the specified key from the Dictionary.
+ </summary>
+ <param name="strKey">The key of the element to remove.</param>
+ <returns>
+ true if the element is successfully found and removed; otherwise, false. 
+ This method returns false if key is not found in the Dictionary.
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1Dictionary`1.ContainsKey(System.String)">
+ <summary>
+ Determines whether the Dictionary contains the specified key.
+ </summary>
+ <param name="strKey">The key to locate in the Dictionary.</param>
+ <returns>true if the Dictionary contains an element with the specified key; otherwise, false.</returns>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1Dictionary`1.TryGetValue(System.String,`0@)">
+ <summary>
+ Gets the value associated with the specified key. 
+ 
+ Use this method if your code frequently attempts to access keys that are not in the dictionary.  
+ Using this method is more efficient than catching the KeyNotFoundException thrown by the Item property.
+ </summary>
+ <param name="strKey">The key of the value to get.</param>
+ <param name="objValue">
+ When this method returns, contains the value associated with the specified key, 
+ if the key is found; otherwise, the default value for the type of the value parameter. 
+ This parameter is passed uninitialized.</param>
+ <returns>true if the Dictionary contains an element with the specified key; otherwise, false.</returns>
+ <remarks>
+ This method combines the functionality of the ContainsKey method and the Item property.
+ 
+ If the key is not found, then the value parameter gets the appropriate default value for the value type 
+ TValue; for example, 0 (zero) for integer types, false for Boolean types, and a Nothing for reference types. 
+</remarks>
+</member>
+<member name="T:K1Library.FrameworkCollections.K1DualKeyDictionary`2">
+ <summary>
+ Represents a generic collection of keys (String) and values (TValue) with index keys (IValue).
+ 
+ Use this if you have a collection of objects that you regulary use more then one key
+ to find it in the collection as it is faster then K1Dictionary and other ICollection classes
+ with a near O(1) 
+ </summary>    
+ <typeparam name="TValue">The datatype of the value you want to store in the Dictionary.</typeparam>
+ <typeparam name="IValue">The datatype of the index key you want to use in the Dictionary.</typeparam>
+<deprecated></deprecated>
+ <remark>This is bloody backwards!!! Should be Dictionary(TKey, TValue) Why is it backwards?!!!</remark>
+ <remark>Do not use this class anymore in future.</remark>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1DualKeyDictionary`2.#ctor">
+ <summary>
+ Initializes a new instance of the Dictionary class that is empty, has the default initial capacity, 
+ uses StringComparer.Ordinal for comparing keys and uses ID property of the value as the index key.
+ </summary>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1DualKeyDictionary`2.#ctor(System.String)">
+ <summary>
+ Initializes a new instance of the Dictionary class that is empty, has the default initial capacity, 
+ uses StringComparer.Ordinal for comparing keys and uses the specified property of the value as 
+ the index key.
+ </summary>
+ <param name="strIndexPropertyName">The property that will be use as the index key for a value</param>
+ <remarks></remarks>
+</member>
+<member name="P:K1Library.FrameworkCollections.K1DualKeyDictionary`2.Item(System.String)">
+ <summary>
+ Gets or sets the value associated with the specified key.
+ </summary>
+ <param name="strKey">The key of the value to get or set.</param>
+ <returns>
+ The value associated with the specified key. If the specified key is not found, 
+ a get operation throws a System.Collections.Generic.KeyNotFoundException, 
+ and a set operation creates a new element with the specified key.
+ </returns>
+ <exception cref="T:System.ArgumentNullException">The key is null.</exception>
+ <exception cref="T:System.Collections.Generic.KeyNotFoundException">
+ The property is retrieved and key does not exist in the collection.
+ </exception>
+</member>
+<member name="P:K1Library.FrameworkCollections.K1DualKeyDictionary`2.Item(`1)">
+ <summary>
+ Gets or sets the value associated with the specified index key.
+ </summary>
+ <param name="indexKey">The index key of the value to get or set.</param>
+ <returns>
+ The value associated with the specified index key. If the specified index key is not found, 
+ both get and set operation throw a System.Collections.Generic.KeyNotFoundException thrown, 
+ note this is different from Item when the key is specified.
+ </returns>
+ <exception cref="T:System.ArgumentNullException">The key is null.</exception>
+ <exception cref="T:System.Collections.Generic.KeyNotFoundException">
+ The key does not exist in the collection.
+ </exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1DualKeyDictionary`2.Add(System.String,`0)">
+ <summary>
+ Adds the specified key and value to the dictionary.
+ </summary>
+ <param name="strKey">The key of the element to add.</param>
+ <param name="objValue">The value of the element to add. The value can be null for reference types.</param>
+ <exception cref="T:System.ArgumentException">An element with the same key already exists in the Dictionary.</exception>
+ <exception cref="T:System.ArgumentNullException">The key is null.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1DualKeyDictionary`2.Add(System.String,`1,`0)">
+ <summary>
+ Adds the specified key and value to the dictionary.
+ </summary>
+ <param name="strKey">The key of the element to add.</param>
+ <param name="objValue">The value of the element to add. The value can be null for reference types.</param>
+ <exception cref="T:System.ArgumentException">An element with the same key already exists in the Dictionary.</exception>
+ <exception cref="T:System.ArgumentNullException">The key is null.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1DualKeyDictionary`2.Remove(System.String)">
+ <summary>
+ Removes the value with the specified key from the Dictionary.
+ </summary>
+ <param name="strKey">The key of the element to remove.</param>
+ <returns>
+ true if the element is successfully found and removed; otherwise, false. 
+ This method returns false if key is not found in the Dictionary.
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1DualKeyDictionary`2.Remove(`1)">
+ <summary>
+ Removes the value with the specified index key from the Dictionary.
+ </summary>
+ <param name="indexKey">The index key of the element to remove.</param>
+ <returns>
+ true if the element is successfully found and removed; otherwise, false. 
+ This method returns false if key is not found in the Dictionary.
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1DualKeyDictionary`2.ContainsKey(System.String)">
+ <summary>
+ Determines whether the Dictionary contains the specified key.
+ </summary>
+ <param name="strKey">The key to locate in the Dictionary.</param>
+ <returns>true if the Dictionary contains an element with the specified key; otherwise, false.</returns>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1DualKeyDictionary`2.ContainsIndexKey(`1)">
+ <summary>
+ Determines whether the Dictionary contains the specified index key.
+ </summary>
+ <param name="indexKey">The index key to locate in the Dictionary.</param>
+ <returns>true if the Dictionary contains an element with the specified index key; otherwise, false.</returns>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1DualKeyDictionary`2.TryGetValue(System.String,`0@)">
+ <summary>
+ Gets the value associated with the specified key. 
+ 
+ Use this method if your code frequently attempts to access keys that are not in the dictionary.  
+ Using this method is more efficient than catching the KeyNotFoundException thrown by the Item property.
+ </summary>
+ <param name="strKey">The key of the value to get.</param>
+ <param name="objValue">
+ When this method returns, contains the value associated with the specified key, 
+ if the key is found; otherwise, the default value for the type of the value parameter. 
+ This parameter is passed uninitialized.</param>
+ <returns>true if the Dictionary contains an element with the specified key; otherwise, false.</returns>
+ <remarks>
+ This method combines the functionality of the ContainsKey method and the Item property.
+ 
+ If the key is not found, then the value parameter gets the appropriate default value for the value type 
+ TValue; for example, 0 (zero) for integer types, false for Boolean types, and a Nothing for reference types. 
+</remarks>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1DualKeyDictionary`2.TryGetValue(`1,`0@)">
+ <summary>
+ Gets the value associated with the specified index key. 
+ 
+ Use this method if your code frequently attempts to access keys that are not in the dictionary.  
+ Using this method is more efficient than catching the KeyNotFoundException thrown by the Item property.
+ </summary>
+ <param name="indexKey">The index key of the value to get.</param>
+ <param name="objValue">
+ When this method returns, contains the value associated with the specified index key, 
+ if the index key is found; otherwise, the default value for the type of the value parameter. 
+ This parameter is passed uninitialized.</param>
+ <returns>true if the Dictionary contains an element with the specified index key; otherwise, false.</returns>
+ <remarks>
+ This method combines the functionality of the ContainsKey method and the Item property.
+ 
+ If the index key is not found, then the value parameter gets the appropriate default value for the value type 
+ TValue; for example, 0 (zero) for integer types, false for Boolean types, and a Nothing for reference types. 
+</remarks>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1DualKeyDictionary`2.GetIndexKey(`0)">
+ <summary>
+ Gets the value to be used as the index key from the property of value that matches index property string
+ </summary>
+ <param name="objValue">The value we want to get the index key for</param>
+ <returns>Returns the value of the property</returns>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1DualKeyDictionary`2.InsertUpdateValue(`1,`0,System.String)">
+ <summary>
+ Will check if a entry exists by the index key, if so then replaces the value.
+ </summary>
+ <param name="indexKey">Index key of the entry we want to update</param>
+ <param name="objNewValue">new value of entry</param>
+ <param name="strKey">Key to use if entry does not exist</param>
+</member>
+<member name="T:K1Library.FrameworkCollections.K1NameCollection">
+ <summary>
+ A collection of associated System.String keys and System.Object values 
+ that can be accessed either with the key or with the index.
+ </summary>
+</member>
+<member name="P:K1Library.FrameworkCollections.K1NameCollection.AllKeys">
+ <summary>
+ Returns a System.String array that contains all the keys in the collection.
+ </summary>
+</member>
+<member name="P:K1Library.FrameworkCollections.K1NameCollection.AllValues">
+ <summary>
+ Returns an System.Object array that contains all the values in the collection.
+ </summary>
+</member>
+<member name="P:K1Library.FrameworkCollections.K1NameCollection.AllValues(System.Type)">
+ <summary>
+ Returns an array of the specified type that contains all the values in the collection.
+ </summary>
+ <param name="type">A System.Type that represents the type of array to return.</param>
+ <exception cref="T:System.ArgumentNullException">type is null.</exception>
+ <exception cref="T:System.ArgumentException">type is not a valid System.Type.</exception>
+</member>
+<member name="P:K1Library.FrameworkCollections.K1NameCollection.Item(System.Int32)">
+ <summary>
+ Gets a single object by index.
+ </summary>
+ <param name="index">The numerical index of the object in the collection.</param>
+ <returns>The object referenced by index.</returns>
+</member>
+<member name="P:K1Library.FrameworkCollections.K1NameCollection.Item(System.String)">
+ <summary>
+ Gets the value of a single object by name.
+ </summary>
+ <param name="name">The name of the object in the collection.</param>
+ <returns>The object referenced by name.</returns>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1NameCollection.Add(System.String,System.Object)">
+ <summary>
+ Adds an entry with the specified key and value.
+ </summary>
+ <param name="name">The System.String key of the entry to add.</param>
+ <param name="value">The System.Object value of the entry to add. The value can be null.</param>
+ <exception cref="T:System.NotSupportedException">The collection is read-only.</exception>
+ <exception cref="T:System.ArgumentNullException">name is null.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1NameCollection.Clear">
+ <summary>
+ Removes all entries from the collection.
+ </summary>
+ <exception cref="T:System.NotSupportedException">The collection is read-only.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1NameCollection.Get(System.Int32)">
+ <summary>
+ Gets the value of the entry at the specified index of the collection.
+ </summary>
+ <param name="index">The zero-based index of the value to get.</param>
+ <returns>An System.Object that represents the value of the entry at the specified index.</returns>
+ <exception cref="T:System.ArgumentOutOfRangeException">index is outside the valid range of indexes for the collection.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1NameCollection.Get(System.String)">
+ <summary>
+ Gets the value of the first entry with the specified key from the collection.
+ </summary>
+ <param name="name">The System.String key of the entry to get.</param>
+ <returns>An System.Object that represents the value of the first entry with the specified key, if found; otherwise, null.</returns>
+ <exception cref="T:System.ArgumentNullException">name is null.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1NameCollection.Get``1(System.Int32)">
+ <summary>
+ Gets the value of the entry at the specified index of the collection.
+ </summary>
+ <param name="index">The zero-based index of the value to get.</param>
+ <returns>A TValue that represents the value of the entry at the specified index.</returns>
+ <exception cref="T:System.ArgumentOutOfRangeException">index is outside the valid range of indexes for the collection.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1NameCollection.Get``1(System.String)">
+ <summary>
+ Gets the value of the first entry with the specified key from the collection.
+ </summary>
+ <param name="name">The System.String key of the entry to get.</param>
+ <returns>A TValue that represents the value of the first entry with the specified key, if found; otherwise, null.</returns>
+ <exception cref="T:System.ArgumentNullException">name is null.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1NameCollection.GetKey(System.Int32)">
+ <summary>
+ Gets the key of the entry at the specified index of the collection.
+ </summary>
+ <param name="index">The zero-based index of the key to get.</param>
+ <returns>A System.String that represents the key of the entry at the specified index.</returns>
+ <exception cref="T:System.ArgumentOutOfRangeException">index is outside the valid range of indexes for the collection.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1NameCollection.ContainsKey(System.String)">
+ <summary>
+ Gets a value indicating whether the collection contains a specified key.
+ </summary>
+ <returns>true if the collection contains the keys; otherwise, false.</returns>
+ <exception cref="T:System.ArgumentNullException">name is null.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1NameCollection.Remove(System.String)">
+ <summary>
+ Removes the entries with the specified key from the collection.
+ </summary>
+ <param name="name">The System.String key of the entries to remove. The key can be null.</param>
+ <exception cref="T:System.NotSupportedException">The collection is read-only.</exception>
+ <exception cref="T:System.ArgumentNullException">name is null.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1NameCollection.RemoveAt(System.Int32)">
+ <summary>
+ Removes the entry at the specified index of the collection.
+ </summary>
+ <param name="index">The zero-based index of the entry to remove.</param>
+ <exception cref="T:System.ArgumentOutOfRangeException">index is outside the valid range of indexes for the collection.</exception>
+ <exception cref="T:System.NotSupportedException">The collection is read-only.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1NameCollection.Set(System.Int32,System.Object)">
+ <summary>
+ Sets the value of the entry at the specified index of the collection.
+ </summary>
+ <param name="index">The zero-based index of the entry to set.</param>
+ <param name="value">The System.Object that represents the new value of the entry to set. The value can be null.</param>
+ <exception cref="T:System.NotSupportedException">The collection is read-only.</exception>
+ <exception cref="T:System.ArgumentOutOfRangeException">index is outside the valid range of indexes for the collection.</exception>
+</member>
+<member name="M:K1Library.FrameworkCollections.K1NameCollection.Set(System.String,System.Object)">
+ <summary>
+ Sets the value of the first entry with the specified key in the collection.
+ </summary>
+ <param name="name">The System.String key of the entry to set.</param>
+ <param name="value">The System.Object that represents the new value of the entry to set. The value can be null.</param>
+ <exception cref="T:System.NotSupportedException">The collection is read-only.</exception>
+ <exception cref="T:System.ArgumentNullException">name is null.</exception>
+</member>
+<member name="T:K1Library.clsAuditTrail">
+ <summary>
+ This Utility class is responsible for logging AuidtTrail data. It is somewhat linked to the clsMaskFieldDictionary class.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsAuditTrail.CreateAuditTrailRecords(K1Library.clsDB,K1Library.clsMethod.enumMethods,K1Library.clsTable,System.Data.DataTable)">
+ <summary>
+ Creates audit trail records for each ID in the data table if we are auditing the specified table and method
+ </summary>
+ <param name="objDb">The database object</param>
+ <param name="eMethod">The method to audit</param>
+ <param name="objTable">The table to audit</param>
+ <param name="objDt">This should be a data table containing a single column of the record IDs we are auditing</param>
+</member>
+<member name="P:K1Library.Trace.Indent(System.String)">
+ <summary>
+ Gets the indent level for a specific thread
+ </summary>
+ <param name="strThreadName">Name of thread to get the indent level for.</param>
+</member>
+<member name="M:K1Library.Trace.WriteLine(System.String,System.String,K1Library.Trace.TraceFormatting)">
+ <summary>
+ Writes a category name and message to the trace listeners in the 
+ System.Diagnostics.Trace.Listeners collection.
+ </summary>
+ <param name="strMessage">A message to write.</param>
+ <param name="strCategory">A category name used to organize the output.</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.Trace.GetCurrentThreadName">
+ <summary>
+ Gets the name or managed thread id of the current thread
+ </summary>
+</member>
+<member name="M:K1Library.Trace.GetPadding(System.String)">
+ <summary>
+ Returns the padding required for a specified thread
+ </summary>
+ <param name="strThreadName">Name of thread we want the display padding for</param>
+</member>
+<member name="P:K1Library.clsMaskBase.SearchFilter">
+ <summary>
+ Set this if you want to forcefully replace filters on mask collections
+ </summary>
+</member>
+<member name="M:K1Library.clsMaskFieldLink.CreateMaskCollection(K1Library.clsTable,K1Library.clsMaskBase.enumMaskObjectType,K1Library.clsTableMask.enumMaskType,System.Int32)">
+ <summary>
+ Retrieves a collection of field link mask objects (specific to the Mask Object Type)
+ </summary>
+</member>
+<member name="P:K1Library.clsDBObjBase.KeyID">
+ <summary>
+ This is the ID field converted to a string (used a lot in dictionaries indexes)
+ </summary>
+</member>
+<member name="T:K1Library.clsEncryption">
+ <summary>
+ New Encryption Class designed for .NET 2.0
+ This class is used to implement the Rijndael encryption method
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsEncryption.#ctor">
+ <summary>
+ Constructor
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsEncryption.#ctor(System.Boolean)">
+ <summary>
+ Constructor
+ </summary>
+ <param name="blnInternal">Use internal key or database key</param>
+ <remarks>Will generate a new IV for each encryption</remarks>
+</member>
+<member name="M:K1Library.clsEncryption.#ctor(System.Boolean,System.Boolean)">
+ <summary>
+ Constructor
+ </summary>
+ <param name="blnInternal">Use internal key or database key</param>
+ <param name="blnUseDefaultIV">Use default IV or generate a new one for each encryption</param>
+ <remarks>
+ If the encrypted value will be compared to a value later on (ie. password) then used the default IV, 
+ otherwise use a dynamic IV as it provides better security
+ </remarks>
+</member>
+<member name="M:K1Library.clsEncryption.Encrypt(System.String)">
+ <summary>
+ Encrypts the given plain text
+ </summary>
+ <param name="strPlainText">Text to be encrypted</param>
+ <returns>Base64 string</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsEncryption.Encrypt(System.Byte[])">
+ <summary>
+ Encryts the given array of bytes
+ </summary>
+ <param name="arrPlainText">Array of UTF8 encoded bytes to be encrypted</param>
+ <returns>Encrypted array of UTF8 encoded bytes</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsEncryption.Encrypt(System.IO.MemoryStream)">
+ <summary>
+ Encrypts the given memory stream
+ </summary>
+ <param name="objInputStream">memory stream to be encrypted</param>
+ <returns>Encrypted memory stream</returns>
+ <remarks>
+ If UseDefaultIV property is False then the generated IV used in the encryption 
+ is stored as the first 32 bytes of the memory stream
+ </remarks>
+</member>
+<member name="M:K1Library.clsEncryption.Decrypt(System.String)">
+ <summary>
+ Decrypts the given cipher text
+ </summary>
+ <param name="strCipherText">Base64 text to be decrypted</param>
+ <returns>Decrypted text</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsEncryption.Decrypt(System.Byte[])">
+ <summary>
+ Decrypts the given array of bytes
+ </summary>
+ <param name="arrCipherText">Array of base64 encoded bytes to be decrypted</param>
+ <returns>Decrypted array of base64 encoded bytes</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsEncryption.Decrypt(System.IO.MemoryStream)">
+ <summary>
+ Decrypts the given memory stream
+ </summary>
+ <param name="objInputStream">memory stream to be decrypted</param>
+ <returns>Decrypted memory stream</returns>
+ <remarks>
+ If UseDefaultIV property is False then the first 32 bytes of the memory stream
+ must be the IV used in the encryption
+ </remarks>
+</member>
+<member name="M:K1Library.clsEncryption.GetDefaultKey">
+ <summary>
+ Generates a random byte array that we always used as our key
+ </summary>
+ <returns>Array of bytes that represents a key</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsEncryption.GetKey(System.String)">
+ <summary>
+ Generates a byte array by hashing the plain key so we can use it as our key
+ </summary>
+ <param name="strPlainKey">The text that will be used as the key for encryption</param>
+ <returns>Array of bytes that represents a key</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsEncryption.GetDefaultIV">
+ <summary>
+ Generates a static Initalise Vector
+ </summary>
+ <returns>Array of bytes to be used for IV</returns>
+ <remarks>This is used for encryptions when the property UseDefaultIV is True</remarks>
+</member>
+<member name="M:K1Library.clsEncryption.ToHex(System.Byte[])">
+ <summary>
+ Converts a byte array into a hexadecimal string for debuging purposes
+ </summary>
+ <param name="arrBytes">Array for bytes that will be converted</param>
+ <returns>Hexadecimal string computed from byte array</returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsSession.AddSessionExpiredNotification">
+ <summary>
+ Adds a notification for when a session expires.
+ </summary>
+ <remarks>Starts the SQL Notification Listener if not started already.</remarks>
+</member>
+<member name="M:K1Library.clsSession.OnSessionExpiredNotification(System.Object,System.Data.SqlClient.SqlNotificationEventArgs)">
+ <summary>
+ Handles the notification when the session record in K1Sessions table is deleted.
+ </summary>
+</member>
+<member name="M:K1Library.clsTableMask.#ctor(K1Library.clsTable,K1Library.clsTableMask.enumMaskType,System.Int32,System.Int32,K1Library.clsDBObject,K1Library.clsMaskBase)">
+ <summary>
+ Creates a new table mask object
+ </summary>
+ <param name="objTable">The table we are creating mask objects for</param>
+ <param name="eMaskType">What type of mask screen is being used (ADD, MODIFY, etc.)</param>
+ <param name="intID">The ID of the record we are modifying, viewing, etc.</param>
+ <param name="intTypeID">Needed if the table is type dependent</param>
+ <param name="objParent">This is necessary for some types of autofills</param>
+ <remarks></remarks>
+</member>
+<member name="P:K1Library.clsTableMask.Table">
+ <summary>
+ The table this pertains to
+ </summary>
+</member>
+<member name="P:K1Library.clsTableMask.MaskCollection">
+ <summary>
+ The collection of all mask objects in sort order
+ </summary>
+</member>
+<member name="P:K1Library.clsTableMask.MaskFieldCollection">
+ <summary>
+ Key is of type String and its value is the DatabaseName property of the clsMaskField.
+ </summary>
+</member>
+<member name="P:K1Library.clsTableMask.MaskOneToManyCollection">
+ <summary>
+ The mask field link dictionary pertaining to one-to-many field links
+ </summary>
+</member>
+<member name="P:K1Library.clsTableMask.MaskManyToManyCollection">
+ <summary>
+ The mask field link dictionary pertaining to many-to-many field links
+ </summary>
+</member>
+<member name="P:K1Library.clsTableMask.ID">
+ <summary>
+ Returns the ID value in the Mask Field Collection (if one exists)
+ </summary>
+</member>
+<member name="P:K1Library.clsTableMask.ExternalID">
+ <summary>
+ Returns the ExternalID value in the Mask Field Collection (if one exists)
+ </summary>
+</member>
+<member name="P:K1Library.clsTableMask.SecurityID">
+ <summary>
+ Returns the SecurityID value in the Mask Field Collection (if one exists)
+ </summary>
+</member>
+<member name="P:K1Library.clsTableMask.TypeID">
+ <summary>
+ Returns the SecurityID value in the Mask Field Collection (if one exists)
+ </summary>
+</member>
+<member name="P:K1Library.clsTableMask.Parent">
+ <summary>
+ The parent table mask object of this object (if coming from a prior mask screen)
+ </summary>
+</member>
+<member name="M:K1Library.clsTableMask.CreateMaskCollection">
+ <summary>
+ Creates the Complete mask object collection in sort order
+ </summary>
+</member>
+<member name="M:K1Library.clsTableMask.GetMaskOrderDataView(K1Library.clsTable,System.Boolean,System.Boolean,System.Int32,System.Boolean)">
+ <summary>
+ Creates a DataView of the mask objects
+ </summary>
+</member>
+<member name="M:K1Library.clsTableMask.InsertUpdate(System.Boolean)">
+ <summary>
+ Either creates a new record (if mask type is add) or updates an existing record (modify)
+ </summary>
+</member>
+<member name="P:K1Library.clsMaskFieldValue.Value">
+ <summary>
+ This is the database value of the mask object
+ </summary>
+</member>
+<member name="P:K1Library.clsMaskFieldValue.FileName">
+ <summary>
+ If the mask field is a blob, this is the name of the file we are to store (used in adds)
+ </summary>
+</member>
+<member name="P:K1Library.clsMaskFieldValue.Display">
+ <summary>
+ If the mask field is a foreign key, this is the associated record's ExternalID
+ </summary>
+</member>
+<member name="P:K1Library.clsMaskFieldValue.ObjectSecurityID">
+ <summary>
+ If the mask field is a foreign key, this is the security ID of the associated record
+ </summary>
+</member>
+<member name="P:K1Library.clsMaskFieldValue.MaskField">
+ <summary>
+ This is a link back to the parent mask field object
+ </summary>
+</member>
+<member name="M:K1Library.clsMaskField.CreateMaskCollection(K1Library.clsTable,System.Int32,System.Boolean)">
+ <summary>
+ Creates a mask field collection and populates the fields if the ID is not null
+ </summary>
+</member>
+<member name="M:K1Library.clsMaskField.CreateMaskCollection(K1Library.clsTable,K1Library.clsTableMask.enumMaskType,System.Int32,System.Int32,K1Library.clsDBObject,K1Library.clsMaskBase,K1Library.clsDB)">
+ <summary>
+ Creates a mask field collection and populates the fields if the ID is not null
+ If this is an ADD Mask Type, fields values are populated using autofills
+ </summary>
+</member>
+<member name="M:K1Library.clsMaskField.LoadRecord(System.Data.DataTable,K1Library.clsMaskFieldDictionary,System.Boolean,K1Library.clsTableMask.enumMaskType)">
+ <summary>
+ Fills the Mask Collection from a Record Using the ID provided
+ </summary>
+</member>
+<member name="M:K1Library.clsMaskField.LoadLinkedData(K1Library.clsMaskField,K1Library.clsTable)">
+ <summary>
+ If the field is a foreign key, this function will load associated data 
+ (linked item's ExternalID and security)
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.#ctor(K1Library.clsTable,K1Library.clsSearchFilter)">
+ <summary>
+ (enumSelectType.COUNT) Returns a count of the records in the table
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.#ctor(K1Library.clsTable,K1Library.clsSearchFilter,System.Boolean)">
+ <summary>
+ (enumSelectType.COUNT) Returns a count of the records in the table
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.#ctor(K1Library.clsTable,K1Library.clsSortCollection,K1Library.clsSearchFilter,System.Boolean,System.Boolean,System.Int32,System.String[],System.Boolean,System.Boolean)">
+ <summary>
+ (enumSelectType.EXPORT) Returns all records for the table
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.#ctor(K1Library.clsTable,K1Library.clsSortCollection,K1Library.clsSearchFilter,System.Int32,System.Boolean,K1Library.clsMaskFieldDictionary,System.Boolean,K1Library.clsSelectInfo.enumSelectType,System.Int32,System.String[])">
+ <summary>
+ (enumSelectType.PAGE) Retrieves a Page of Data (Only Columns or Sorted Fields) starting from colRecord
+ (enumSelectType.COUNT_TO_REC) Counts the number of records up to colRecord
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.#ctor(K1Library.clsTable,K1Library.clsSortCollection,K1Library.clsSearchFilter,System.Int32,System.Boolean,K1Library.clsMaskFieldDictionary,System.Boolean,K1Library.clsSelectInfo.enumSelectType,System.Int32,System.Boolean,System.String[],System.Boolean)">
+ <summary>
+ (enumSelectType.PAGE) Retrieves a Page of Data (Only Columns or Sorted Fields) starting from colRecord
+ (enumSelectType.COUNT_TO_REC) Counts the number of records up to colRecord
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.#ctor(K1Library.clsTable,K1Library.clsSortCollection,K1Library.clsSearchFilter,System.Int32,System.Boolean,System.Int32,System.Int32)">
+ <summary>
+ (enumSelectType.GOTO_PAGE) Will retrieve page of data after intRecordNumber
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.#ctor(K1Library.clsTable,K1Library.clsSortCollection,K1Library.clsSearchFilter,System.Int32,System.Boolean,System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ (enumSelectType.GOTO_PAGE) Will retrieve page of data after intRecordNumber
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.#ctor(K1Library.clsTable,K1Library.clsSortCollection,K1Library.clsSearchFilter,K1Library.clsSearchElement)">
+ <summary>
+ (enumSelectType.FIND) Will retrieve list of IDs that match objSearchElement
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.#ctor(K1Library.clsTable,K1Library.clsSortCollection,K1Library.clsSearchFilter,K1Library.clsMaskFieldDictionary,K1Library.clsMaskFieldDictionary)">
+ <summary>
+ (enumSelectType.SELECTION) Will retrieve a list of IDs between (and including)
+ the two records specified (colRecordStart and colRecordEnd)
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.#ctor(K1Library.clsTable,K1Library.clsSortCollection,K1Library.clsSearchFilter,System.Boolean,K1Library.clsMaskFieldDictionary,K1Library.clsMaskFieldDictionary)">
+ <summary>
+ (enumSelectType.SELECTION) Will retrieve a list of IDs between (and including)
+ the two records specified (colRecordStart and colRecordEnd) but you can ignore 
+ security
+ </summary>
+</member>
+<member name="P:K1Library.clsSelectInfo.DataTable">
+ <summary>
+ This will contain the final recordset
+ </summary>
+</member>
+<member name="P:K1Library.clsSelectInfo.SQL">
+ <summary>
+ This will create the SQL query that can be used to get the final recordset
+ </summary>
+</member>
+<member name="P:K1Library.clsSelectInfo.UseParameters">
+ <summary>
+ Should parameters be used in the generated query
+ </summary>
+</member>
+<member name="P:K1Library.clsSelectInfo.IgnoreWildCards">
+ <summary>
+ Should ignore wildcards for string searches
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.Initialize">
+ <summary>
+ This function builds collection of objects used for constructing the final SQL Select Statement
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.AssembleSQL">
+ <summary>
+ Constructs the SQL SELECT Statement using the collections
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.CreateTableAlias(System.String,System.String,System.String,K1Library.clsFieldLink,Microsoft.VisualBasic.Collection,System.Boolean,System.Boolean)">
+ <summary>
+ Will make sure that the table passed in has an alias if necessary,
+ it also adds the table declaration to the table declarations collection
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.InitializeFields">
+ <summary>
+ Goes through fields for the table and adds the selectable ones to the fields collection
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.AddSecurityFilter">
+ <summary>
+ Add the record security check to the SQL
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.ParseSearchFilter">
+ <summary>
+ Will build a SQL Filter based on the Search Filter provided (if provided)
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.RecurseSearchFilter(K1Library.clsSearchObjBase,System.String@,System.String,System.Boolean)">
+ <summary>
+ Recurses through the search filter's search groups and search elements
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.HandleSearchElement(K1Library.clsSearchElement,System.String@,System.String)">
+ <summary>
+ Functionality to handle a search element
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.HandlePagingRecords">
+ <summary>
+ If this is being used for paging, this will build the SQL depending on the start record
+ If this is a selection type, you can also specify an end record
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.GetPagingFilter(K1Library.clsMaskFieldDictionary,System.Boolean)">
+ <summary>
+ Builds SQL filters based on direction and record
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.GetOrderBy">
+ <summary>
+ constructs a SQL Order By statement based off the sort objects
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.AppendToFilter(K1Library.clsSearchElement)">
+ <summary>
+ Appends or creates a new search filter for the select statement.
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.GetFilter(K1Library.clsSearchElement,K1Library.clsField,System.String,System.Boolean)">
+ <summary>
+ Returns a filter based off the data in the search element
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.CreateTempTable(System.Data.DataTable)">
+ <summary>
+ Adds a temp table to the temp table collection
+ </summary>
+ <remarks>
+ It is necessary to use temp tables when we come accross the scenario where we select
+ an ID that is contained IN a large set of values.  SQL Server currently has a limit on
+ the number of constants\variables that can be used in a SQL Statement, and so the temp
+ tables are a way to circumvent this limitation
+ </remarks>
+</member>
+<member name="M:K1Library.clsSelectInfo.DatePartSQL(K1Library.clsSelectInfo.enumDatePartType,System.String)">
+ <summary>
+ Returns the SQL DatePart function
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.RangeReplace(System.String,System.Boolean,System.Boolean,System.Boolean)">
+ <summary>
+ Converts a text value to its necessary range equivalent
+ </summary>
+ <param name="strText"></param>
+ <param name="blnHighRange"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsSelectInfo.EscapeWildcardChars(System.String,System.Boolean,System.Boolean)">
+ <summary>
+ When using the SQL LIKE statement certain characters need to be prefixed with an escape character
+ because they mean something specific to the LIKE function
+ </summary>
+</member>
+<member name="M:K1Library.clsSelectInfo.ProcessSQL">
+ <summary>
+ Gets a datatable from the SQL Statement constructed
+ </summary>
+ <remarks>
+ If the SQL Statement contains temporary tables, this procedure first creates the temp
+ tables and populates them prior to running the main SQL Select query
+ </remarks>
+</member>
+<member name="P:K1Library.clsSort.SortOrder">
+ <summary>
+ Used to sort fields (starts from lowest to highest)
+ </summary>
+</member>
+<member name="P:K1Library.clsSort.Field">
+ <summary>
+ The field to sort on
+ </summary>
+</member>
+<member name="P:K1Library.clsSort.Ascending">
+ <summary>
+ The direction with which to sort the field
+ </summary>
+</member>
+<member name="M:K1Library.clsSearchElement.#ctor(K1Library.clsSearchFilter.enumOperatorType,System.String)">
+ <summary>
+ Creates a new filter element
+ </summary>
+ <param name="eOpType">AND, OR, ANDNOT, ORNOT, [Nothing]</param>
+ <param name="strFieldRef">Full Boolean representation of a field (ie. Person.EntityID.ExternalID)</param>
+</member>
+<member name="M:K1Library.clsSearchElement.#ctor(K1Library.clsSearchFilter.enumOperatorType,System.String,K1Library.clsSearchFilter.enumComparisonType,System.Object)">
+ <summary>
+ Creates a new filter element
+ </summary>
+ <param name="eOpType">AND, OR, ANDNOT, ORNOT, [Nothing]</param>
+ <param name="strFieldRef">Full Boolean representation of a field (ie. Person.EntityID.ExternalID)</param>
+ <param name="eCompareType">The equality operation to use</param>
+ <param name="objValue">The value to filter by</param>
+</member>
+<member name="M:K1Library.clsSearchElement.#ctor(K1Library.clsSearchFilter.enumOperatorType,System.String,K1Library.clsSearchFilter.enumComparisonType,System.Object,K1Library.clsField)">
+ <summary>
+ Creates a new filter element
+ </summary>
+ <param name="eOpType">AND, OR, ANDNOT, ORNOT, [Nothing]</param>
+ <param name="strFieldRef">Full Boolean representation of a field (ie. Person.EntityID.ExternalID)</param>
+ <param name="eCompareType">The equality operation to use</param>
+ <param name="objValue">The value to filter by</param>
+ <param name="objField">The actual field object specified in the field ref</param>
+</member>
+<member name="P:K1Library.clsSearchElement.FieldRef">
+ <summary>
+ Full Boolean representation of a field (ie. Person.EntityID.ExternalID)
+ </summary>
+</member>
+<member name="P:K1Library.clsSearchElement.CompareType">
+ <summary>
+ The equality operation to use
+ </summary>
+</member>
+<member name="P:K1Library.clsSearchElement.Value">
+ <summary>
+ The value to filter by
+ </summary>
+</member>
+<member name="P:K1Library.clsSearchElement.ConstantValue">
+ <summary>
+ The Constant value if using system variables
+ </summary>
+</member>
+<member name="P:K1Library.clsSearchElement.Field">
+ <summary>
+ The actual field object specified in the field ref
+ </summary>
+</member>
+<member name="M:K1Library.clsSearchFilter.#ctor(K1Library.clsDB,System.String,System.String)">
+ <summary>
+ Creates a new search filter using boolean search syntax
+ </summary>
+</member>
+<member name="M:K1Library.clsSearchFilter.#ctor(K1Library.clsDB,K1Library.clsSearchGroup,System.String)">
+ <summary>
+ Creates a new search filter using a search group object
+ </summary>
+</member>
+<member name="M:K1Library.clsSearchFilter.#ctor(K1Library.clsDB,K1Library.clsSearchGroup,K1Library.clsTableMask)">
+ <summary>
+ Creates a new search filter using a search group object and table mask object
+ </summary>
+</member>
+<member name="M:K1Library.clsSearchFilter.#ctor(K1Library.clsDB,System.String,K1Library.clsSearchFilter.enumComparisonType,System.Object,System.String)">
+ <summary>
+ Creates a basic search filter with only one filter criteria
+ </summary>
+</member>
+<member name="P:K1Library.clsSearchFilter.XML">
+ <summary>
+ The XML representation of the Search Filter
+ </summary>
+</member>
+<member name="P:K1Library.clsSearchFilter.UserSyntax">
+ <summary>
+ The user syntax (boolean syntax) of the Search Filter
+ </summary>
+</member>
+<member name="P:K1Library.clsSearchFilter.Group">
+ <summary>
+ The Search Group representation of the filter
+ </summary>
+</member>
+<member name="M:K1Library.clsSearchFilter.GetSQLOperator(K1Library.clsSearchFilter.enumOperatorType)">
+ <summary>
+ Returns the SQL representation of the Operator Type
+ </summary>
+</member>
+<member name="M:K1Library.clsSearchFilter.GetFilterType">
+ <summary>
+ Returns a single type if filter only includes a single type filter, otherwise returns NULL_INT
+ </summary>
+</member>
+<member name="M:K1Library.clsSearchFilter.RecurseGetTypeIDS(K1Library.clsTable,K1Library.clsSearchObjBase,System.Collections.Hashtable@,System.Collections.Hashtable@,System.Boolean@,System.Boolean@)">
+ <summary>
+ Who knows?
+ </summary>
+ <param name="objTable"></param>
+ <param name="objSO"></param>
+ <param name="colIncludeIDs"></param>
+ <param name="colExcludeIDs"></param>
+ <param name="blnOK"></param>
+ <param name="blnNot"></param>
+ <remarks>Method is too difficult to follow. Select Cases with no default control flow logic :( This is a bad piece of code!!!</remarks>
+</member>
+<member name="M:K1Library.clsSearchGroup.#ctor(K1Library.clsSearchFilter.enumOperatorType)">
+ <summary>
+ Creates a new search group
+ </summary>
+ <param name="eOpType">AND, OR, ANDNOT, ORNOT, [Nothing]</param>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.clsSearchGroup.#ctor(K1Library.clsSearchFilter.enumOperatorType,System.Collections.Generic.List{K1Library.clsSearchObjBase})">
+ <summary>
+ Creates a new search group
+ </summary>
+ <param name="eOpType">AND, OR, ANDNOT, ORNOT, [Nothing]</param>
+ <param name="colSearchObjs">Collection of search groups and search elements</param>
+ <remarks></remarks>
+</member>
+<member name="P:K1Library.clsSearchGroup.SearchObjs">
+ <summary>
+ Collection of search groups and search elements
+ </summary>
+</member>
+<member name="P:K1Library.clsSearchObjBase.OperatorType">
+ <summary>
+ AND, OR, ANDNOT, ORNOT, [Nothing]
+ </summary>
+</member>
+<member name="T:K1Library.Configuration.SettingsSectionBase">
+ <summary>
+ Base Class for creating custom configuration sections in the application configuration file
+ </summary>
+ <remarks>
+ You must add the following tag to configuration/configSections:
+    <section name="[SectionName]" type="[StrongName], [Assembly]" />
+ 
+ Example
+   [SectionName] = BroadcastingSettings
+   [StrongName]  = K1.DRM.BroadcastingSettingsSection
+   [Assembly]    = DRM
+ </remarks>
+</member>
+<member name="M:K1Library.Configuration.SettingsSectionBase.Encrypt">
+ <summary>
+ Protects the section so it cannot manually be editted.
+ </summary>
+</member>
+<member name="M:K1Library.Configuration.SettingsSectionBase.Decrypt">
+ <summary>
+ Unprotects the section so it can manually be editted.
+ </summary>
+</member>
+<member name="M:K1Library.Configuration.SettingsSectionBase.Save">
+ <summary>
+ Saves the section to the application configuration file
+ </summary>
+</member>
+<member name="M:K1Library.Configuration.SettingsSectionBase.GetSetting(System.String)">
+ <summary>
+ Returns the innerText for the specified SettingElement.
+ </summary>
+ <param name="strSettingName">Name of the SettingElement that we want to return the value for.</param>
+</member>
+<member name="M:K1Library.Configuration.SettingsSectionBase.SetSetting(System.String,System.String)">
+ <summary>
+ Sets the innerText for the specified SettingElement.
+ </summary>
+ <param name="strSettingName">Name of the SettingElement that we want to set value for.</param>
+ <param name="strValue">Value to set.</param>
+</member>
+<member name="M:K1Library.modGlobal.ProperPath(System.String)">
+ <summary>
+ will add a "\" character to a path if it is not already the last character
+ </summary>
+ <param name="strPath"></param>
+ <returns></returns>
+ <remarks>Stupid! Why not just use System.IO.Path.CombinePath(...) !!!</remarks>
+</member>
+<member name="M:K1Library.modGlobal.ValidateFileName(System.String)">
+ <summary>
+ This is a misleading method. This method breaks SOLID principal of single responsibility.
+ </summary>
+ <param name="strFile"></param>
+ <returns></returns>
+ <remarks>Stupid method!!!</remarks>
+</member>
+<member name="M:K1Library.modGlobal.ParseString(System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ Returns a section of a string given begin and end index strings.
+ </summary>
+ <param name="strToParse">The string to search in</param>
+ <param name="strBegin">Where to start when returning sub-string.</param>
+ <param name="strEnd">Where to end when returning sub-string.  
+ If the End string is not found, the sub-string from the begin string to the 
+ end of the initial string is returned.</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.modGlobal.CreateHashtableFromIDString(System.String)">
+ <summary>
+ Returns a comma separated string of the IDs (integers) in the collection
+ </summary>
+</member>
+<member name="M:K1Library.modGlobal.CreateIDStringFromCollection(System.Collections.ICollection)">
+ <summary>
+ Returns a comma separated string of the IDs (integers) in the collection
+ </summary>
+</member>
+<member name="M:K1Library.modGlobal.CreateIDStringFromDataTable(System.Data.DataTable)">
+ <summary>
+ Returns a comma separated string of the IDs (integers) in the collection
+ </summary>
+ <param name="objDT"></param>
+ <returns>a coma delimited string.</returns>
+ <remarks>lets avoid this method, pls don't use with a large array. will crash the application</remarks>    
+</member>
+<member name="M:K1Library.modGlobal.CreateDataTableFromIDString(System.String)">
+ <summary>
+ Returns a comma separated string of the IDs (integers) in the collection
+ </summary>
+</member>
+<member name="M:K1Library.modGlobal.AppendToCommaString(System.String@,System.String)">
+ <summary>
+ Will create a comma delimited string using the original string and the new value
+ </summary>
+</member>
+<member name="M:K1Library.modGlobal.AppendToCommaString(System.Text.StringBuilder@,System.String)">
+ <summary>
+ Will create a comma delimited string using the original string and the new value
+ </summary>
+</member>
+<member name="M:K1Library.modGlobal.AppendToString(System.String@,System.String,System.String)">
+ <summary>
+ Will create a delimited string using the original string, the new value, and delimeted by strSeparator
+ </summary>
+</member>
+<member name="M:K1Library.modGlobal.AppendToString(System.Text.StringBuilder@,System.String,System.String)">
+ <summary>
+ Will create a comma delimited string using the original string and the new value
+ </summary>
+</member>
+<member name="M:K1Library.modGlobal.AppendToString(System.String@,System.String,System.String,System.String)">
+ <summary>
+ Will create a delimited string using the original string, the new value, and delimeted by strSeparator
+ </summary>
+</member>
+<member name="M:K1Library.modGlobal.MakePlural(System.String)">
+ <summary>
+ Takes a noun and returns the plural form of it
+ </summary>
+</member>
+<member name="M:K1Library.modGlobal.ConvertFQDNToHostAndInst(System.String)">
+ <summary>
+ Extract the hostname out from the FQDN and return the host\instance
+ </summary>
+ <param name="strFQDN"></param>
+ <returns>host\instance</returns>
+</member>
+<member name="M:K1Library.modGlobal.ImplodeArray(System.String[],System.String)">
+ <summary>
+ Implodes an array into a string joined by strGlue
+ </summary>
+ <param name="arrValues">Array of values we want to convert into a string</param>
+ <param name="strGlue">Separates the values</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:K1Library.modGlobal.GetIsolatedStorageFile(System.IO.IsolatedStorage.IsolatedStorageScope)">
+ <summary>
+ Obtains user-scoped or machine-scoped isolated storage corresponding to the application domain 
+ identity and assembly or calling code's application identity or assembly identity.
+ </summary>
+ <param name="eIsolatedStorage">Isolated Storage scope we want to use.</param>
+ <exception cref="T:System.Security.SecurityException">Sufficient isolated storage permissions have not been granted.</exception>
+ <remarks>
+ eIsolatedStorage is a bitwise value with the following valid values:
+ Machine Scope
+   Application = IsolatedStorageScope.Machine or IsolatedStorageScope.Application
+   Assembly = IsolatedStorageScope.Machine or IsolatedStorageScope.Assembly
+   Domain = IsolatedStorageScope.Machine or IsolatedStorageScope.Domain
+ 
+ User Scope (IsolatedStorageScope.User is optional)
+   Application = IsolatedStorageScope.User or IsolatedStorageScope.Application
+   Assembly = IsolatedStorageScope.User or IsolatedStorageScope.Assembly
+   Domain = IsolatedStorageScope.User or IsolatedStorageScope.Domain 
+ </remarks>
+</member>
+<member name="M:K1Library.modGlobal.GetIsolatedStorageFileStream(System.IO.IsolatedStorage.IsolatedStorageScope,System.String,System.IO.FileMode,System.IO.FileAccess)">
+ <summary>
+ Initializes a new instance of an System.IO.IsolatedStorage.IsolatedStorageFileStream object 
+ giving access to the file designated by path in the specified mode.
+ </summary>
+ <param name="eIsolatedStorage">Isolated Storage scope we want to use.</param>
+ <param name="strFileName">The relative path of the file within isolated storage.</param>
+ <param name="eFileMode">One of the System.IO.FileMode values.</param>
+ <param name="eFileAccess">A bitwise combination of the System.IO.FileAccess values.</param>
+ <exception cref="T:System.IO.FileNotFoundException">No file was found and the mode is set to Open.</exception>
+ <exception cref="T:System.ArgumentException">The path is badly formed.</exception>
+ <exception cref="T:System.ArgumentNullException">The path is null.</exception>
+</member>
+<member name="M:K1Library.modGlobal.XmlSerializeAndSave(System.String,System.Object)">
+ <summary>
+ Serializes an object into XML and then saves it into the users application scope
+ </summary>
+ <param name="strFileName">The relative path of the file within isolated storage.</param>
+ <param name="objValue">Object to be serialized and saved.</param>
+ <remarks>
+ Root isolated storage folder = [Documents and Settings]\[User]\Local Settings\Application Data\IsolatedStorage\
+ </remarks> 
+ <example>
+ Dim objAutoComplete As AutoCompleteStringCollection = txtUserName.AutoCompleteCustomSource
+ XmlSerializeAndSave("user_auto.xml", objAutoComplete)
+ </example>
+</member>
+<member name="M:K1Library.modGlobal.XmlSerializeAndSave(System.IO.IsolatedStorage.IsolatedStorageScope,System.String,System.Object)">
+ <summary>
+ Serializes an object into XML and then saves it into the specified isolated storage scope
+ </summary>
+ <param name="eIsolatedStorage">Isolated Storage scope we want to use.</param>
+ <param name="strFileName">The relative path of the file within isolated storage.</param>
+ <param name="objValue">Object to be serialized and saved.</param>
+ <remarks>
+ Root User isolated storage folder = [Documents and Settings]\[User]\Local Settings\Application Data\IsolatedStorage\
+ Root Machine isolated storage folder = [Documents and Settings]\All Users\Application Data\IsolatedStorage\
+ 
+ eIsolatedStorage is a bitwise value with the following valid values:
+ Machine Scope
+   Application = IsolatedStorageScope.Machine or IsolatedStorageScope.Application
+   Assembly = IsolatedStorageScope.Machine or IsolatedStorageScope.Assembly
+   Domain = IsolatedStorageScope.Machine or IsolatedStorageScope.Domain
+ 
+ User Scope (IsolatedStorageScope.User is optional)
+   Application = IsolatedStorageScope.User or IsolatedStorageScope.Application
+   Assembly = IsolatedStorageScope.User or IsolatedStorageScope.Assembly
+   Domain = IsolatedStorageScope.User or IsolatedStorageScope.Domain 
+ </remarks> 
+ <example>
+ Dim eIsolatedScope as IsolatedStorageScope = IsolatedStorageScope.Machine or IsolatedStorageScope.Application
+ Dim objAutoComplete As AutoCompleteStringCollection = txtUserName.AutoCompleteCustomSource
+ XmlSerializeAndSave(eIsolatedScope, "user_auto.xml", objAutoComplete)
+ </example>
+</member>
+<member name="M:K1Library.modGlobal.XmlDeserializeAndLoad(System.String,System.Type)">
+ <summary>
+ Loads a file from the users application scope and deserializes it
+ </summary>
+ <param name="strFileName">The relative path of the file within isolated storage.</param>
+ <param name="objType">Type of the object that will be deserialized.</param>
+ <example>
+ Dim objAutoComplete As AutoCompleteStringCollection = XmlDeserializeAndLoad("user_auto.xml", GetType(AutoCompleteStringCollection))
+ </example>
+</member>
+<member name="M:K1Library.modGlobal.XmlDeserializeAndLoad(System.IO.IsolatedStorage.IsolatedStorageScope,System.String,System.Type)">
+ <summary>
+ Loads a file from the specified isolated storage scope and deserializes it
+ </summary>
+ <param name="eIsolatedStorage">Isolated Storage scope we want to use.</param>
+ <param name="strFileName">The relative path of the file within isolated storage.</param>
+ <param name="objType">Type of the object that will be deserialized.</param>
+ <remarks>
+ eIsolatedStorage is a bitwise value with the following valid values:
+ Machine Scope
+   Application = IsolatedStorageScope.Machine or IsolatedStorageScope.Application
+   Assembly = IsolatedStorageScope.Machine or IsolatedStorageScope.Assembly
+   Domain = IsolatedStorageScope.Machine or IsolatedStorageScope.Domain
+ 
+ User Scope (IsolatedStorageScope.User is optional)
+   Application = IsolatedStorageScope.User or IsolatedStorageScope.Application
+   Assembly = IsolatedStorageScope.User or IsolatedStorageScope.Assembly
+   Domain = IsolatedStorageScope.User or IsolatedStorageScope.Domain 
+ </remarks> 
+ <example>
+ Dim eIsolatedScope as IsolatedStorageScope = IsolatedStorageScope.Machine or IsolatedStorageScope.Application
+ Dim objAutoComplete As AutoCompleteStringCollection = XmlDeserializeAndLoad(eIsolatedScope, "user_auto.xml", GetType(AutoCompleteStringCollection))
+ </example>
+</member>
+<member name="M:K1Library.modGlobal.GetVersion">
+ <summary>
+ Returns the Application version 
+ </summary>
+ <returns>Returns the Application version.</returns>
+</member>
+<member name="M:K1Library.modGlobal.VerifyEDOCFileSize(System.String)">
+ <summary>
+ Verify that a file is less than 2147483648 bytes.
+ </summary>
+ <param name="strFileName">Name of the File.</param>
+</member>
+<member name="M:K1Library.modGlobal.UpdateSettingsValue(System.String,System.String)">
+ <summary>
+ Update a setting's value in the application's config file.
+ </summary>
+ <param name="strName">Name of the setting.</param>
+ <param name="strValue">New value for the setting.</param>
+</member>
+<member name="M:K1Library.modGlobal.UpdateSettingsValue(System.String,System.String,System.String)">
+ <summary>
+ Update a setting's value in the specified configuration file.
+ </summary>
+ <param name="strConfigFile">File path of configuration file to modify.</param>
+ <param name="strName">Name of the setting.</param>
+ <param name="strValue">New value for the setting.</param>
+</member>
+<member name="M:K1Library.modGlobal.IsEmailExtension(System.String)">
+ <summary>
+ Determine if the extension is email type.  Leading . is optional.  Case insensitive.
+ </summary>
+ <param name="ext">expects the extension of the filename</param>
+ <returns>true if the extension is email type</returns>
+</member>
+<member name="M:K1Library.modGlobal.FixInvalidUri(System.IO.Stream,System.Func{System.String,System.Uri})">
+ <summary>
+ Emmanuel Cardakaris - 2200003756
+ For excel documents that have invalid URIs embedded, reading the contents with openXML fails. 
+ The way to fix this is to replace the invalid URIs with a dummy one then reimport the file.
+ </summary>
+ <param name="fs">Filestream of Excel with bad URIs</param>
+ <param name="invalidUriHandler">Delegate function that returns a replacement URI</param>
+</member>
+</members>
+</doc>

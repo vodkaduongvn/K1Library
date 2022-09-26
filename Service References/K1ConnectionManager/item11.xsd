@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:KnowledgeoneCorp/Contracts/IConnectionManger" elementFormDefault="qualified" targetNamespace="urn:KnowledgeoneCorp/Contracts/IConnectionManger" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://dev009/K1/ConnectionManagerService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/K1ConnectionManager" />
+  <xs:import schemaLocation="http://dev009/K1/ConnectionManagerService/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetSystemNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/K1ConnectionManager" minOccurs="0" name="eSystemTypeFilter" type="q1:IConnectionManager.SystemType" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/K1ConnectionManager" minOccurs="0" name="eAccessType" type="q2:IConnectionManager.AccessType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetSystemNamesResult" nillable="true" type="q3:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SystemExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSystemName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SystemExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SystemExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSystemName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="blnIsLatest" type="xs:boolean" />
+        <xs:element minOccurs="0" name="dblVersion" type="xs:double" />
+        <xs:element minOccurs="0" name="strAppName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="blnSkipCheckVersion" type="xs:boolean" />
+        <xs:element minOccurs="0" name="dblMinDatabaseVersion" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetSystemInfoResult" nillable="true" type="q4:ArrayOfstring" />
+        <xs:element minOccurs="0" name="blnIsLatest" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertConnectionString">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSystemName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strConnectionString" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/K1ConnectionManager" minOccurs="0" name="eSystemType" type="q5:IConnectionManager.SystemType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertConnectionStringResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertConnection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSystemName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strConnectionValue" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/K1ConnectionManager" minOccurs="0" name="eSystemType" type="q6:IConnectionManager.SystemType" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/K1ConnectionManager" minOccurs="0" name="eAccessType" type="q7:IConnectionManager.AccessType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertConnectionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateConnectionString">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSystemName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateConnectionStringResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateConnection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSystemName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strConnectionValue" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/K1ConnectionManager" minOccurs="0" name="eAccessType" type="q8:IConnectionManager.AccessType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateConnectionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSystem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSystemName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSystemResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

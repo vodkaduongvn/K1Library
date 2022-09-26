@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:i0="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="urn:KnowledgeoneCorp/Services/ConnectionManagerService" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="ConnectionManagerService" targetNamespace="urn:KnowledgeoneCorp/Services/ConnectionManagerService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://dev009/K1/ConnectionManagerService/?wsdl=wsdl1" />
+  <wsdl:types />
+  <wsdl:service name="ConnectionManagerService">
+    <wsdl:port name="CustomBinding_IConnectionManager" binding="i0:CustomBinding_IConnectionManager">
+      <soap12:address location="net.tcp://localhost/K1/ConnectionManagerService/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost/K1/ConnectionManagerService/</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+            <X509Data>
+              <X509Certificate>MIICgzCCAfCgAwIBAgIQSX5+k/4zSJhIqll3yEtYhDAJBgUrDgMCHQUAMFoxCzAJBgNVBAYTAkFVMSAwHgYDVQQLExdLbm93bGVkZ2VvbmUgQ29wb3JhdGlvbjEpMCcGA1UEAxMgS25vd2xlZGdlb25lIENvcnAgUm9vdCBBdXRob3JpdHkwHhcNMDgwNDMwMDIxODM3WhcNMzkxMjMxMjM1OTU5WjAYMRYwFAYDVQQDEw1LMVNlcnZpY2VDZXJ0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDJx+TrLJ5497A62sdYKkozkYo2c1XKiXZ6Dq1EMmOZcMnlm7tOl1nh7d35DzfY/ss1zjioi8FCWojUnHIJo5jc14LeV5yBgQXmJb5FvtTcFY0QS6ZHdC1FCAg3FNx1+8W/8xZSu2Nvi8MRQDKponoiaxVMj5FaLOehLudYIgV1SwIDAQABo4GTMIGQMIGNBgNVHQEEgYUwgYKAEIS+E/UH8UJvj8p5MX8jkxShXDBaMQswCQYDVQQGEwJBVTEgMB4GA1UECxMXS25vd2xlZGdlb25lIENvcG9yYXRpb24xKTAnBgNVBAMTIEtub3dsZWRnZW9uZSBDb3JwIFJvb3QgQXV0aG9yaXR5ghAnAU59T8QJq0t7xxByirBzMAkGBSsOAwIdBQADgYEAkA/85RJQx2LjoGHr8+af3FmTGXAfiWTh+cp/gWSEd03VmE/TvtgL9EC2bS5cjv03I2WhePYZ1mtRj1kxj2Z10JQkFzEJbNoq9i5tN/BorZcyi+mTb8jcFrqY7sFiDpOcSPaSRK4IPDOUVW99N9Ju3QShneXHG17XbBeAbVnKChM=</X509Certificate>
+            </X509Data>
+          </KeyInfo>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

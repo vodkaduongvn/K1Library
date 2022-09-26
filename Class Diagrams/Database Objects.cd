@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="K1Library.clsAccessRightField">
+    <Position X="15.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAhAQUAQAAAAAAAAAAAAAAAIAAAgQAAAwEI=</HashCode>
+      <FileName>DBObject\clsAccessRightField.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsAccessRightMethod">
+    <Position X="27.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAQUAQAAAAAAABBAAAAAAAAAAAAAAAQEI=</HashCode>
+      <FileName>DBObject\clsAccessRightMethod.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsApplicationMethod">
+    <Position X="37.75" Y="5.25" Width="2" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsApplicationMethod.enumAppMethod" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DBObject\clsApplicationMethod.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABRAAAEAEAAAAAAAAAIEAAAAAAACAAAICAAI=</HashCode>
+      <FileName>DBObject\clsApplicationMethod.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsAutoNumberFormat">
+    <Position X="45.5" Y="5.25" Width="2.25" />
+    <NestedTypes>
+      <Class Name="K1Library.clsAutoNumberFormat.ErrorMessage" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DBObject\clsAutoNumberFormat.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgAAgIAQAQGAAEQ5AAEQCAAAAQgAACEAAAGIAEAAACI=</HashCode>
+      <FileName>DBObject\clsAutoNumberFormat.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsBackground">
+    <Position X="56.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAEAQAAAAAAAAAAEAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>DBObject\clsBackground.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsButton">
+    <Position X="66.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABQAAAUCwAAAADEAARJAAAAAAACCAAAIAAAI=</HashCode>
+      <FileName>DBObject\clsButton.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsCaption">
+    <Position X="74" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABQAAQEAQAAAABAAAAIAAAAAAAACAAAIAAAA=</HashCode>
+      <FileName>DBObject\clsCaption.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsDBObjBase">
+    <Position X="46.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAIAAAAGEAhAAQQACAAAAAAAAAAAAgAAAGAQABAAg=</HashCode>
+      <FileName>DBObject\clsDBObjBase.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="K1Library.clsDBObject">
+    <Position X="87.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAQAAAAQAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>DBObject\clsDBObject.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsEDOC">
+    <Position X="0.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAEAAAAwEACABAIABAAAAAQAAAAAAMYAABAAAA=</HashCode>
+      <FileName>DBObject\clsEDOC.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsErrorMessage">
+    <Position X="8.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABQAAQEAQAAAABAAAAIAAAAAAAACAAAIABAA=</HashCode>
+      <FileName>DBObject\clsErrorMessage.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsField">
+    <Position X="18.25" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>GEgLFQASDKJocMCRIO8ARCDIAI4EcKUpCgQIgijFYWI=</HashCode>
+      <FileName>DBObject\clsField.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsFieldLink">
+    <Position X="30.25" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IEACBQIgAAgAUUAQBAgAABAAACgAMAACCCEAAgAAAQM=</HashCode>
+      <FileName>DBObject\clsFieldLink.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsFilter">
+    <Position X="40.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAhIEAAAAAgAREAABACgAAAAAAAQAAAAAABgAAAAgMI=</HashCode>
+      <FileName>DBObject\clsFilter.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsFont">
+    <Position X="48.5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AggkAAAAAAgAkEYAAAQAAIAIAAAgAAAAAABIgAAAIAQ=</HashCode>
+      <FileName>DBObject\clsFont.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsHelpScreen">
+    <Position X="59" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAEAAAAAAAAAAAAAgAAAAAQAAAAAAAAI=</HashCode>
+      <FileName>DBObject\clsHelpScreen.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsIcon">
+    <Position X="69" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQUCwAAAACEAARBAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>DBObject\clsIcon.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsK1Configuration">
+    <Position X="76.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIIYAABghFkEQRUAJRVBAACEEBACogAAIQBEogEgI=</HashCode>
+      <FileName>DBObject\clsK1Configuration.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsLanguage">
+    <Position X="82.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>DBObject\clsLanguage.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsLanguageString">
+    <Position X="90" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACQkAAAAAAAAAAAAAAAAIACAAACAIAAAI=</HashCode>
+      <FileName>DBObject\clsLanguageString.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsListColumn">
+    <Position X="3.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAKBAAAAAgAQEASAAAAAEAAAAgAIAAACAAgAAAAgUI=</HashCode>
+      <FileName>DBObject\clsListColumn.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsMethod">
+    <Position X="10.75" Y="5.25" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsMethod.enumMethods" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DBObject\clsMethod.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AEAAAAABAQAAAEAQAAAAEAAAAAAAAAAABAAAAAAAAAI=</HashCode>
+      <FileName>DBObject\clsMethod.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsMultipleSequence">
+    <Position X="21.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAACEAAAAAAAAgAAAAAAAAAAAAAAQAAAAI=</HashCode>
+      <FileName>DBObject\clsMultipleSequence.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsPeriod">
+    <Position X="33" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEIAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DBObject\clsPeriod.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsPerson">
+    <Position X="43" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAABAAAA=</HashCode>
+      <FileName>DBObject\clsPerson.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsProcess">
+    <Position X="51.25" Y="5.25" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsProcess.enumProcessType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DBObject\clsProcess.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="K1Library.clsProcess.enumInputFormat" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DBObject\clsProcess.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAQBAAAAEAAEAAIgAAAAAAAAAEAABAAJASEAAAAAI=</HashCode>
+      <FileName>DBObject\clsProcess.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsScheduledTask">
+    <Position X="61.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgSAAAAABACAFEIAEAAAAAAgAABBgEAAQRAAAgAAgEA=</HashCode>
+      <FileName>DBObject\clsScheduledTask.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsSecurity">
+    <Position X="71.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>DBObject\clsSecurity.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsSecurityGroup">
+    <Position X="79.5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEBAAABAAEAAAGAQAAwCAAACAAQAACAAABAAAgAAAA4=</HashCode>
+      <FileName>DBObject\clsSecurityGroup.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsString">
+    <Position X="84.75" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAQEAQAAAAAAAAAAAAAAAAQAAAAAAAABA=</HashCode>
+      <FileName>DBObject\clsString.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsTable">
+    <Position X="92.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CCBQQAAAAEABw0AwEgADAgABEAggIAQJCAAAAQEBgQI=</HashCode>
+      <FileName>DBObject\clsTable.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsTableMethod">
+    <Position X="5.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAEAAIAAAAAAIAAAEAAAAAAAAAAEAAAI=</HashCode>
+      <FileName>DBObject\clsTableMethod.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsTrigger">
+    <Position X="13.25" Y="5.25" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsTrigger.enumTriggerAction" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DBObject\clsTrigger.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgAEAAAAAAAAAEAAIBAAQAAIAAAEAAAIQABACAEBAAQ=</HashCode>
+      <FileName>DBObject\clsTrigger.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsTypeField">
+    <Position X="24.5" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEACBAAQAAgAUEAQAAwAAAAAAAgAIAABCAQgAAAAAWI=</HashCode>
+      <FileName>DBObject\clsTypeField.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsTypeFieldLink">
+    <Position X="35.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEACBAAAAAgAUEAQAAAAAAAAAAgAIAAACAAAAAgAAUI=</HashCode>
+      <FileName>DBObject\clsTypeFieldLink.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsUserProfile">
+    <Position X="53.75" Y="11.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QIAIAAAACgAAAcAQRQAAAAAAAAAAAAIQAABAAAAASEA=</HashCode>
+      <FileName>DBObject\clsUserProfile.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsUserProfileBase">
+    <Position X="53.75" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>oCAAAjgACgBCIAAQABABAAAAAAAAAAIyAAAgCAACQAg=</HashCode>
+      <FileName>DBObject\clsUserProfileBase.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="K1Library.clsWarningMessage">
+    <Position X="64" Y="5.25" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="K1Library.clsWarningMessage.enumWarningType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DBObject\clsWarningMessage.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgCAAAAAgAAAQEAQIAAAQAAIAAAEAAAAQAAAAAAAgAI=</HashCode>
+      <FileName>DBObject\clsWarningMessage.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

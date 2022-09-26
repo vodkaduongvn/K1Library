@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="urn:KnowledgeoneCorp/Contracts/IConnectionManger" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="urn:KnowledgeoneCorp/Contracts/IConnectionManger" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:KnowledgeoneCorp/Contracts/IConnectionManger/Imports">
+      <xsd:import schemaLocation="http://dev009/K1/ConnectionManagerService/?xsd=xsd0" namespace="urn:KnowledgeoneCorp/Contracts/IConnectionManger" />
+      <xsd:import schemaLocation="http://dev009/K1/ConnectionManagerService/?xsd=xsd4" namespace="urn:KnowledgeoneCorp/Fault/K1ServiceFault" />
+      <xsd:import schemaLocation="http://dev009/K1/ConnectionManagerService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dev009/K1/ConnectionManagerService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/K1ConnectionManager" />
+      <xsd:import schemaLocation="http://dev009/K1/ConnectionManagerService/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://dev009/K1/ConnectionManagerService/?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+      <xsd:import schemaLocation="http://dev009/K1/ConnectionManagerService/?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConnectionManager_GetSystemNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemNames" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_GetSystemNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_GetSystemNames_K1ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="urn:KnowledgeoneCorp/Fault/K1ServiceFault" name="detail" element="q1:K1ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_SystemExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:SystemExists" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_SystemExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SystemExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_SystemExists_K1ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="urn:KnowledgeoneCorp/Fault/K1ServiceFault" name="detail" element="q2:K1ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_GetSystemInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemInfo" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_GetSystemInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_GetSystemInfo_FaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q3:FaultException" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_GetSystemInfo_K1ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="urn:KnowledgeoneCorp/Fault/K1ServiceFault" name="detail" element="q4:K1ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_InsertConnectionString_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertConnectionString" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_InsertConnectionString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertConnectionStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_InsertConnectionString_K1ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="urn:KnowledgeoneCorp/Fault/K1ServiceFault" name="detail" element="q5:K1ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_InsertConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertConnection" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_InsertConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_InsertConnection_K1ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="urn:KnowledgeoneCorp/Fault/K1ServiceFault" name="detail" element="q6:K1ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_UpdateConnectionString_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConnectionString" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_UpdateConnectionString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConnectionStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_UpdateConnectionString_K1ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="urn:KnowledgeoneCorp/Fault/K1ServiceFault" name="detail" element="q7:K1ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_UpdateConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConnection" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_UpdateConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_UpdateConnection_K1ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="urn:KnowledgeoneCorp/Fault/K1ServiceFault" name="detail" element="q8:K1ServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_DeleteSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSystem" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_DeleteSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConnectionManager_DeleteSystem_K1ServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="urn:KnowledgeoneCorp/Fault/K1ServiceFault" name="detail" element="q9:K1ServiceFault" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IConnectionManager">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSystemNames">
+      <wsdl:input wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/GetSystemNames" message="tns:IConnectionManager_GetSystemNames_InputMessage" />
+      <wsdl:output wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/GetSystemNamesResponse" message="tns:IConnectionManager_GetSystemNames_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/GetSystemNamesK1ServiceFaultFault" name="K1ServiceFaultFault" message="tns:IConnectionManager_GetSystemNames_K1ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SystemExists">
+      <wsdl:input wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/SystemExists" message="tns:IConnectionManager_SystemExists_InputMessage" />
+      <wsdl:output wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/SystemExistsResponse" message="tns:IConnectionManager_SystemExists_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/SystemExistsK1ServiceFaultFault" name="K1ServiceFaultFault" message="tns:IConnectionManager_SystemExists_K1ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSystemInfo">
+      <wsdl:input wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/GetSystemInfo" message="tns:IConnectionManager_GetSystemInfo_InputMessage" />
+      <wsdl:output wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/GetSystemInfoResponse" message="tns:IConnectionManager_GetSystemInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/GetSystemInfoFaultExceptionFault" name="FaultExceptionFault" message="tns:IConnectionManager_GetSystemInfo_FaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/GetSystemInfoK1ServiceFaultFault" name="K1ServiceFaultFault" message="tns:IConnectionManager_GetSystemInfo_K1ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="InsertConnectionString">
+      <wsdl:input wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/InsertConnectionString" message="tns:IConnectionManager_InsertConnectionString_InputMessage" />
+      <wsdl:output wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/InsertConnectionStringResponse" message="tns:IConnectionManager_InsertConnectionString_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/InsertConnectionStringK1ServiceFaultFault" name="K1ServiceFaultFault" message="tns:IConnectionManager_InsertConnectionString_K1ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="InsertConnection">
+      <wsdl:input wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/InsertConnection" message="tns:IConnectionManager_InsertConnection_InputMessage" />
+      <wsdl:output wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/InsertConnectionResponse" message="tns:IConnectionManager_InsertConnection_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/InsertConnectionK1ServiceFaultFault" name="K1ServiceFaultFault" message="tns:IConnectionManager_InsertConnection_K1ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="UpdateConnectionString">
+      <wsdl:input wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/UpdateConnectionString" message="tns:IConnectionManager_UpdateConnectionString_InputMessage" />
+      <wsdl:output wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/UpdateConnectionStringResponse" message="tns:IConnectionManager_UpdateConnectionString_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/UpdateConnectionStringK1ServiceFaultFault" name="K1ServiceFaultFault" message="tns:IConnectionManager_UpdateConnectionString_K1ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="UpdateConnection">
+      <wsdl:input wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/UpdateConnection" message="tns:IConnectionManager_UpdateConnection_InputMessage" />
+      <wsdl:output wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/UpdateConnectionResponse" message="tns:IConnectionManager_UpdateConnection_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/UpdateConnectionK1ServiceFaultFault" name="K1ServiceFaultFault" message="tns:IConnectionManager_UpdateConnection_K1ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="DeleteSystem">
+      <wsdl:input wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/DeleteSystem" message="tns:IConnectionManager_DeleteSystem_InputMessage" />
+      <wsdl:output wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/DeleteSystemResponse" message="tns:IConnectionManager_DeleteSystem_OutputMessage" />
+      <wsdl:fault wsaw:Action="urn:KnowledgeoneCorp/Contracts/IConnectionManger/IConnectionManager/DeleteSystemK1ServiceFaultFault" name="K1ServiceFaultFault" message="tns:IConnectionManager_DeleteSystem_K1ServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
